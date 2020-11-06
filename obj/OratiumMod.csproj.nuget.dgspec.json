@@ -1,0 +1,49 @@
+{
+  "format": 1,
+  "restore": {
+    "c:\\Users\\edvin.tsygankov\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\OratiumMod\\OratiumMod.csproj": {}
+  },
+  "projects": {
+    "c:\\Users\\edvin.tsygankov\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\OratiumMod\\OratiumMod.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\edvin.tsygankov\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\OratiumMod\\OratiumMod.csproj",
+        "projectName": "OratiumMod",
+        "projectPath": "c:\\Users\\edvin.tsygankov\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\OratiumMod\\OratiumMod.csproj",
+        "packagesPath": "C:\\Users\\edvin.tsygankov\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\edvin.tsygankov\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\OratiumMod\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\edvin.tsygankov\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net45"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net45": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net45": {
+          "dependencies": {
+            "tModLoader.CodeAssist": {
+              "target": "Package",
+              "version": "[0.1.*, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
