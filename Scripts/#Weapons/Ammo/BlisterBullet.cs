@@ -8,6 +8,7 @@ namespace OratiumMod.Items.Weapons.Ammo
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Blister Bullet");
+            Tooltip.SetDefault("Speedy reflective bullets");
         }
 
         public override void SetDefaults()

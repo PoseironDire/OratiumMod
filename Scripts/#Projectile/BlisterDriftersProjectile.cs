@@ -16,7 +16,7 @@ namespace OratiumMod.Items.Projectiles
             projectile.ranged = true;
             projectile.magic = false;
             projectile.penetrate = 5;
-            projectile.timeLeft = 120;
+            projectile.timeLeft = 1000;
             projectile.extraUpdates = 2;
         }
         public override void SetStaticDefaults()
