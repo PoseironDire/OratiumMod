@@ -47,7 +47,9 @@ namespace OratiumMod.Items.Accessories.Wings
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod.ItemType("BlisterBar"), 10);
+            recipe.AddIngredient(mod.ItemType("BlisterBar"), 18);
+            recipe.AddIngredient(ItemID.SoulofFlight, 20);
+            recipe.AddIngredient(mod.ItemType("SoulofIgnite"), 6);
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
             recipe.AddRecipe();

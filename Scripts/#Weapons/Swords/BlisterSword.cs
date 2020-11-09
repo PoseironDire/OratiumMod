@@ -12,8 +12,8 @@ namespace OratiumMod.Items.Weapons.Swords
             item.width = 20;
             item.height = 20;
             item.value = 90000;
-            item.useTime = 12;
-            item.useAnimation = 13;
+            item.useTime = 15;
+            item.useAnimation = 16;
             item.rare = 4;
             item.useStyle = 1;
             item.knockBack = 4;
@@ -21,7 +21,7 @@ namespace OratiumMod.Items.Weapons.Swords
             item.autoReuse = true;
             item.crit = 20;
             item.shoot = mod.ProjectileType("BlisterSwordProjectile");
-            item.shootSpeed = 8f;
+            item.shootSpeed = 6f;
         }
         public override void SetStaticDefaults()
         {
@@ -31,7 +31,7 @@ namespace OratiumMod.Items.Weapons.Swords
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod.ItemType("BlisterBar"), 10);
+            recipe.AddIngredient(mod.ItemType("BlisterBar"), 12);
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
             recipe.AddRecipe();

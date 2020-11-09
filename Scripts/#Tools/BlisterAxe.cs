@@ -30,7 +30,8 @@ namespace OratiumMod.Items.Tools
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod.ItemType("BlisterBar"), 10);
+            recipe.AddIngredient(mod.ItemType("BlisterBar"), 9);
+            recipe.AddIngredient(mod.ItemType("SoulofIgnite"), 4);
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
             recipe.AddRecipe();
