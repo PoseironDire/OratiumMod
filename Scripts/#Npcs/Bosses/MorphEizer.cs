@@ -7,6 +7,7 @@ namespace OratiumMod.Items.Npcs.Bosses
     [AutoloadBossHead]
     public class MorphEizer : ModNPC
     {
+
         public override void SetDefaults()
         {
             npc.width = 100;
