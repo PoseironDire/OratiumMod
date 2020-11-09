@@ -7,8 +7,8 @@ namespace OratiumMod.Items.Weapons.Swords
     {
         public override void SetDefaults()
         {
-            item.damage = 31;
             item.melee = true;
+            item.damage = 40;
             item.width = 20;
             item.height = 20;
             item.value = 90000;
@@ -21,7 +21,7 @@ namespace OratiumMod.Items.Weapons.Swords
             item.autoReuse = true;
             item.crit = 20;
             item.shoot = mod.ProjectileType("BlisterSwordProjectile");
-            item.shootSpeed = 10f;
+            item.shootSpeed = 8f;
         }
         public override void SetStaticDefaults()
         {

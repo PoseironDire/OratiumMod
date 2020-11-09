@@ -8,12 +8,12 @@ namespace OratiumMod.Items.Tools
         public override void SetDefaults()
         {
             item.melee = true;
-            item.damage = 40;
+            item.damage = 32;
             item.width = 48;
             item.height = 48;
             item.useTime = 12;
             item.useAnimation = 12;
-            item.axe = 25;
+            item.axe = 115;
             item.useStyle = 1;
             item.knockBack = 6;
             item.value = 90000;

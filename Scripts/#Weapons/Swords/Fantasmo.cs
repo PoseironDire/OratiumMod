@@ -12,8 +12,8 @@ namespace OratiumMod.Items.Weapons.Swords
         {
             item.damage = 40;
             item.melee = true;
-            item.width = 22;
-            item.height = 22;
+            item.width = 40;
+            item.height = 40;
             item.value = 10000000;
             item.useTime = 11;
             item.useAnimation = 12;
@@ -29,15 +29,16 @@ namespace OratiumMod.Items.Weapons.Swords
             DisplayName.SetDefault("Fantasmo");
             Tooltip.SetDefault("???...");
         }
-        public override bool AltFunctionUse(Player player) {
-			return true;
-		}
-
-		public override bool CanUseItem(Player player) 
+        public override bool AltFunctionUse(Player player)
         {
-			if (player.altFunctionUse == 2) 
+            return true;
+        }
+
+        public override bool CanUseItem(Player player)
+        {
+            if (player.altFunctionUse == 2)
             {
-				item.damage = 250;
+                item.damage = 250;
                 item.melee = true;
                 item.noMelee = true;
                 item.noUseGraphic = true;
@@ -46,16 +47,16 @@ namespace OratiumMod.Items.Weapons.Swords
                 item.useTime = 20;
                 item.useAnimation = 21;
                 item.shootSpeed = 12f;
-				item.shoot = mod.ProjectileType("FantasmoProjectile");
+                item.shoot = mod.ProjectileType("FantasmoProjectile");
                 item.useStyle = 1;
                 item.knockBack = 10;
                 item.UseSound = SoundID.Item1;
                 item.autoReuse = true;
                 item.crit = 23;
-			}
-			else if (player.ownedProjectileCounts[item.shoot] < 1)
+            }
+            else if (player.ownedProjectileCounts[item.shoot] < 1)
             {
-				item.damage = 40;
+                item.damage = 40;
                 item.melee = true;
                 item.noMelee = false;
                 item.noUseGraphic = false;
@@ -69,9 +70,9 @@ namespace OratiumMod.Items.Weapons.Swords
                 item.autoReuse = true;
                 item.crit = 30;
                 item.shoot = ProjectileID.None;
-			}
+            }
             return player.ownedProjectileCounts[item.shoot] < 1;
-		}
+        }
 
         public override void MeleeEffects(Player player, Rectangle hitbox)
         {

@@ -13,6 +13,7 @@ namespace OratiumMod.Items.Tools
             item.height = 48;
             item.useTime = 1;
             item.useAnimation = 8;
+            item.crit = 4;
             item.pick = 205;
             item.useStyle = 1;
             item.knockBack = 6;

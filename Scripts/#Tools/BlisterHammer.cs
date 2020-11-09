@@ -8,12 +8,13 @@ namespace OratiumMod.Items.Tools
         public override void SetDefaults()
         {
             item.melee = true;
-            item.damage = 19;
+            item.damage = 20;
             item.width = 48;
             item.height = 48;
             item.useTime = 5;
             item.useAnimation = 9;
-            item.hammer = 75;
+            item.crit = 4;
+            item.hammer = 85;
             item.useStyle = 1;
             item.knockBack = 6;
             item.value = 100000;
@@ -26,7 +27,7 @@ namespace OratiumMod.Items.Tools
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Blister Hammer");
-            Tooltip.SetDefault("What Do You Want..");
+            Tooltip.SetDefault("Fastet hammer out there!");
         }
         public override void AddRecipes()
         {
