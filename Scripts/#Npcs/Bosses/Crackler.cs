@@ -80,7 +80,7 @@ namespace OratiumMod.Items.Npcs.Bosses
             npc.lifeMax = (int)(npc.lifeMax * 0.625f * bossLifeScale);
             npc.damage = (int)(npc.damage * 0.6f);
         }
-
+        
         public override void AI()
         {
 
