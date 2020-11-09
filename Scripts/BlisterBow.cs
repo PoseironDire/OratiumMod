@@ -2,7 +2,7 @@ using System.Runtime.InteropServices;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace OratiumMod.Items.Weapons.Guns
+namespace OratiumMod.Items.Weapons.Bows
 {
     public class BlisterBow : ModItem
     {
