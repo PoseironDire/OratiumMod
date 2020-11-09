@@ -21,7 +21,7 @@ namespace OratiumMod.Items.Weapons.Swords
             item.autoReuse = true;
             item.crit = 20;
             item.shoot = mod.ProjectileType("BlisterSwordProjectile");
-            item.shootSpeed = 14f;
+            item.shootSpeed = 10f;
         }
         public override void SetStaticDefaults()
         {

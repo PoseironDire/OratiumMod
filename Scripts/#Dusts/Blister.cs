@@ -10,7 +10,7 @@ namespace OratiumMod.Items.Dusts
             dust.velocity *= 0.3f;
             dust.noGravity = true;
             dust.noLight = true;
-            dust.scale *= 0.7f;
+            dust.scale *= 0.9f;
         }
 
         public override bool Update(Dust dust)

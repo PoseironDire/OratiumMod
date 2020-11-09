@@ -35,14 +35,41 @@ namespace OratiumMod.Items.Npcs.Bosses
         }
         public override void NPCLoot()
         {
-            int choice = Main.rand.Next(2);
-            if (choice == 0)
+            if (Main.expertMode)
             {
-                Item.NewItem(npc.getRect(), mod.ItemType("Evamparus"));
+                int choice = Main.rand.Next(4);
+                if (choice == 0)
+                {
+                    Item.NewItem(npc.getRect(), mod.ItemType("Evamparus"));
+                }
+                else if (choice == 1)
+                {
+                    Item.NewItem(npc.getRect(), mod.ItemType("Fantasmo"));
+                }
+                else if (choice == 2)
+                {
+                    Item.NewItem(npc.getRect(), mod.ItemType("Deathbringer"));
+                }
+                else if (choice == 3)
+                {
+                    Item.NewItem(npc.getRect(), mod.ItemType("BlisterDrifters"));
+                }
+                else if (choice == 4)
+                {
+                    Item.NewItem(npc.getRect(), mod.ItemType("BlisterPickaxe"));
+                }
             }
-            else if (choice == 1)
+            else
             {
-                Item.NewItem(npc.getRect(), mod.ItemType("Fantasmo"));
+                int choice = Main.rand.Next(2);
+                if (choice == 0)
+                {
+                    Item.NewItem(npc.getRect(), mod.ItemType("BlisterPickaxe"));
+                }
+                else if (choice == 1)
+                {
+                    Item.NewItem(npc.getRect(), mod.ItemType("BlisterDrifters"));
+                }
             }
 
             if (Main.expertMode)

@@ -14,11 +14,11 @@ namespace OratiumMod.Items.Weapons.Throwing
             item.noMelee = true;
             item.ranged = true;
             item.noUseGraphic = true;
-            item.shootSpeed = 14;
+            item.shootSpeed = 10;
             item.shoot = mod.ProjectileType("BlisterDriftersProjectile");
             item.value = 135000;
-            item.useTime = 8;
-            item.useAnimation = 16;
+            item.useTime = 10;
+            item.useAnimation = 21;
             item.rare = 4;
             item.useStyle = 1;
             item.knockBack = 2;

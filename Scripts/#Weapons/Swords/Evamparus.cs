@@ -12,8 +12,8 @@ namespace OratiumMod.Items.Weapons.Swords
         {
             item.damage = 100;
             item.melee = true;
-            item.width = 22;
-            item.height = 22;
+            item.width = 20;
+            item.height = 20;
             item.value = 10000000;
             item.useTime = 15;
             item.useAnimation = 16;
