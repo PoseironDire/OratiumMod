@@ -2,7 +2,8 @@ using Terraria.ModLoader;
 
 namespace OratiumMod
 {
-	public class OratiumMod : Mod
-	{
-	}
+    public class OratiumMod : Mod
+    {
+
+    }
 }
