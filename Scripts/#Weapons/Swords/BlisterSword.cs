@@ -12,8 +12,8 @@ namespace OratiumMod.Items.Weapons.Swords
             item.width = 20;
             item.height = 20;
             item.value = 90000;
-            item.useTime = 15;
-            item.useAnimation = 16;
+            item.useTime = 18;
+            item.useAnimation = 19;
             item.rare = 4;
             item.useStyle = 1;
             item.knockBack = 4;
@@ -21,7 +21,7 @@ namespace OratiumMod.Items.Weapons.Swords
             item.autoReuse = true;
             item.crit = 20;
             item.shoot = mod.ProjectileType("BlisterSwordProjectile");
-            item.shootSpeed = 6f;
+            item.shootSpeed = 10f;
         }
         public override void SetStaticDefaults()
         {

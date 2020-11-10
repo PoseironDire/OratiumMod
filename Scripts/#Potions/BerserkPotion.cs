@@ -9,7 +9,7 @@ namespace OratiumMod.Items.Potions
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Berserk Potion");
-            Tooltip.SetDefault("Lose all defence in exchange for DOUBLED damage.");
+            Tooltip.SetDefault("Lose all defence in exchange for doubled damage.");
         }
 
         public override void SetDefaults()

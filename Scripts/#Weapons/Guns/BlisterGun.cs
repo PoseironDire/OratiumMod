@@ -15,7 +15,7 @@ namespace OratiumMod.Items.Weapons.Guns
 
         public override void SetDefaults()
         {
-            item.damage = 40; // Sets the item's damage. Note that projectiles shot by this weapon will use its and the used ammunition's damage added together.
+            item.damage = 20; // Sets the item's damage. Note that projectiles shot by this weapon will use its and the used ammunition's damage added together.
             item.ranged = true; // sets the damage type to ranged
             item.width = 40; // hitbox width of the item
             item.height = 20; // hitbox height of the item
@@ -27,7 +27,7 @@ namespace OratiumMod.Items.Weapons.Guns
             item.value = 100000; // how much the item sells for (measured in copper)
             item.rare = 4; // the color that the item's name will be in-game
             item.UseSound = SoundID.Item36; // mod.GetLegacySoundSlot(SoundType.Item, "Items/Sounds/gunShot"); // The sound that this item plays when used.
-            item.autoReuse = false; // if you can hold click to automatically use it again
+            item.autoReuse = true; // if you can hold click to automatically use it again
             item.shoot = 10; //idk why but all the guns in the vanilla source have this
             item.shootSpeed = 35f; // the speed of the projectile (measured in pixels per frame)
             item.useAmmo = AmmoID.Bullet; // The "ammo Id" of the ammo item that this weapon uses. Note that this is not an item Id, but just a magic value.

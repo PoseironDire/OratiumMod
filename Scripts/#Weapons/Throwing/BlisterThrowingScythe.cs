@@ -8,7 +8,7 @@ namespace OratiumMod.Items.Weapons.Throwing
     {
         public override void SetDefaults()
         {
-            item.damage = 75;
+            item.damage = 55;
             item.width = 20;
             item.height = 20;
             item.melee = true;
