@@ -44,9 +44,9 @@ namespace OratiumMod.Items.Weapons.Swords
                 item.noUseGraphic = true;
                 item.width = 22;
                 item.height = 22;
-                item.useTime = 20;
-                item.useAnimation = 21;
-                item.shootSpeed = 12f;
+                item.useTime = 30;
+                item.useAnimation = 31;
+                item.shootSpeed = 16f;
                 item.shoot = mod.ProjectileType("FantasmoProjectile");
                 item.useStyle = 1;
                 item.knockBack = 10;
