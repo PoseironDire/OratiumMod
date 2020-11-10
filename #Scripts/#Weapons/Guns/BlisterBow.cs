@@ -8,7 +8,7 @@ namespace OratiumMod.Items.Weapons.Bows
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("The most op bow u can find.");
+            Tooltip.SetDefault("The most op bow you can find.");
         }
 
         public override void SetDefaults()
