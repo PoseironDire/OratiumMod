@@ -3,11 +3,11 @@ using Terraria.ModLoader;
 
 namespace OratiumMod.Items.Weapons.Ammo
 {
-    public class BlisterBullet : ModItem
+    public class AdamantiumBullet : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Blister Bullet");
+            DisplayName.SetDefault("Adamantium Bullet");
             Tooltip.SetDefault("Speedy reflective bullets");
         }
 
@@ -22,14 +22,14 @@ namespace OratiumMod.Items.Weapons.Ammo
             item.knockBack = 10;
             item.rare = 4;
             item.value = 10;
-            item.shoot = ModContent.ProjectileType<Projectiles.BlisterBulletProjectile>();
+            item.shoot = ModContent.ProjectileType<Projectiles.AdamantiumBulletProjectile>();
             item.shootSpeed = 15;
             item.ammo = AmmoID.Bullet;
         }
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod.ItemType("BlisterBar"), 1);
+            recipe.AddIngredient(mod.ItemType("Adamantium"), 1);
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this, 150);
             recipe.AddRecipe();

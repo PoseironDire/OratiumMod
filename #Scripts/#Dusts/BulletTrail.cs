@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace OratiumMod.Items.Dusts
 {
-    public class GunTrail : ModDust
+    public class BulletTrail : ModDust
     {
         public override void OnSpawn(Dust dust)
         {

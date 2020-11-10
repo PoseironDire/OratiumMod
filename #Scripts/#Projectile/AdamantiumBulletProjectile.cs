@@ -6,11 +6,11 @@ using Terraria.ModLoader;
 
 namespace OratiumMod.Items.Projectiles
 {
-    public class BlisterBulletProjectile : ModProjectile
+    public class AdamantiumBulletProjectile : ModProjectile
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Blister Bullet");
+            DisplayName.SetDefault("Adamantium Bullet");
         }
 
         public override void SetDefaults()
@@ -37,7 +37,7 @@ namespace OratiumMod.Items.Projectiles
 
             if (projectile.owner == Main.myPlayer && Main.rand.Next(4) == 0)
             {
-                Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<GunTrail>());
+                Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<BulletTrail>());
             }
         }
         public override bool OnTileCollide(Vector2 oldVelocity)
