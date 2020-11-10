@@ -25,7 +25,6 @@ namespace OratiumMod.Items.Weapons.Throwing
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
             item.crit = 23;
-
         }
         public override void SetStaticDefaults()
         {

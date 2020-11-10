@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace OratiumMod.Items.Armor
 {
-	[AutoloadEquip(EquipType.Head)]
+    [AutoloadEquip(EquipType.Head)]
     public class BlisterHelmet : ModItem
     {
         public override void SetStaticDefaults()
@@ -27,10 +27,10 @@ namespace OratiumMod.Items.Armor
         }
         public override bool IsArmorSet(Item head, Item body, Item legs)
         {
-			return body.type == ModContent.ItemType<BlisterSuit>() && legs.type == ModContent.ItemType<BlisterLeggings>();
-		}
-        public override void UpdateArmorSet(Player player) 
-        { 
+            return body.type == ModContent.ItemType<BlisterSuit>() && legs.type == ModContent.ItemType<BlisterLeggings>();
+        }
+        public override void UpdateArmorSet(Player player)
+        {
             player.setBonus = "20% increased melee damage";
             player.meleeDamage += 0.2f;
         }
