@@ -29,7 +29,7 @@ namespace OratiumMod.Items.Weapons.Ammo
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod.ItemType("Adamantium"), 1);
+            recipe.AddIngredient(mod.ItemType("AdamantiumBar"), 1);
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this, 150);
             recipe.AddRecipe();
