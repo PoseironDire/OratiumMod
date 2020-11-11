@@ -9,21 +9,22 @@ namespace OratiumMod.Items.Weapons.Spears
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Doulgar Spear");
+            DisplayName.SetDefault("Doulgar Spear");
+            Tooltip.SetDefault("A faster variant of the Spear");
         }
 
         public override void SetDefaults()
         {
-            item.damage = 14;
+            item.damage = 10;
             item.useStyle = ItemUseStyleID.HoldingOut;
-            item.useAnimation = 18;
-            item.useTime = 24;
-            item.shootSpeed = 3.7f;
-            item.knockBack = 11f;
+            item.useAnimation = 24;
+            item.useTime = 34;
+            item.shootSpeed = 2.7f;
+            item.knockBack = 7f;
             item.width = 32;
             item.height = 32;
             item.scale = 1f;
-            item.rare = 2;
+            item.rare = 3;
             item.value = Item.sellPrice(gold: 1);
 
             item.melee = true;
@@ -39,6 +40,23 @@ namespace OratiumMod.Items.Weapons.Spears
         {
             // Ensures no more than one spear can be thrown out, use this when using autoReuse
             return player.ownedProjectileCounts[item.shoot] < 1;
+        }
+
+        public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ItemID.Spear);
+            recipe.AddIngredient(ItemID.PlatinumBar, 12);
+            recipe.AddTile(TileID.Anvils);
+            recipe.SetResult(this);
+            recipe.AddRecipe();
+
+            ModRecipe recipe2 = new ModRecipe(mod);
+            recipe2.AddIngredient(ItemID.Spear);
+            recipe2.AddIngredient(ItemID.GoldBar, 12);
+            recipe2.AddTile(TileID.Anvils);
+            recipe2.SetResult(this);
+            recipe2.AddRecipe();
         }
     }
 }

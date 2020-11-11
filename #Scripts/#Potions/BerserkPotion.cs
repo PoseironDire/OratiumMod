@@ -32,9 +32,20 @@ namespace OratiumMod.Items.Potions
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.DirtBlock);
+            recipe.AddIngredient(ItemID.Fireblossom);
+            recipe.AddIngredient(ItemID.DoubleCod);
+            recipe.AddIngredient(ItemID.VileMushroom);
+            recipe.AddTile(TileID.Bottles);
             recipe.SetResult(this);
             recipe.AddRecipe();
+
+            ModRecipe recipe2 = new ModRecipe(mod);
+            recipe2.AddIngredient(ItemID.Fireblossom);
+            recipe2.AddIngredient(ItemID.DoubleCod);
+            recipe2.AddIngredient(ItemID.ViciousMushroom);
+            recipe2.AddTile(TileID.Bottles);
+            recipe2.SetResult(this);
+            recipe2.AddRecipe();
         }
     }
 }

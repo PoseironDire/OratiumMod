@@ -12,7 +12,7 @@ namespace OratiumMod.Items.Weapons.Swords
         {
             item.damage = 180;
             item.melee = true;
-            item.axe = 75;
+            item.axe = 25;
             item.width = 40;
             item.height = 40;
             item.value = 10000000;
