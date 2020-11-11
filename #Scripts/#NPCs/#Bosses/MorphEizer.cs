@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace OratiumMod.Items.Npcs.Bosses
+namespace OratiumMod.Items.NPCs.Bosses
 {
     [AutoloadBossHead]
     public class MorphEizer : ModNPC

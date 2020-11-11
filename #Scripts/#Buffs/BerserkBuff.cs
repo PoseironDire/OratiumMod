@@ -1,4 +1,4 @@
-using OratiumMod.Items.Npcs;
+using OratiumMod.Items.NPCs;
 using Terraria;
 using Terraria.ModLoader;
 
