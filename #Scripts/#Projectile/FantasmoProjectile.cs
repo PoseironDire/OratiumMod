@@ -11,7 +11,7 @@ namespace OratiumMod.Items.Projectiles
         {
             projectile.width = 40;
             projectile.height = 40;
-            projectile.aiStyle = 1;
+            projectile.aiStyle = 3;
             projectile.friendly = true;
             projectile.melee = true;
             projectile.tileCollide = false;
