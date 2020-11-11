@@ -38,7 +38,7 @@ namespace OratiumMod.Items.Projectiles
 
             if (projectile.owner == Main.myPlayer && Main.rand.Next(4) == 0)
             {
-                Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<BulletTrail>()); // Add Particle
+                Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<AdamantiumBulletTrail>()); // Add Particle
             }
         }
         public override bool OnTileCollide(Vector2 oldVelocity)

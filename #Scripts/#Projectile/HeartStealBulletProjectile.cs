@@ -22,7 +22,7 @@ namespace OratiumMod.Items.Projectiles
             projectile.hostile = false;         //Can the projectile deal damage to the player?
             projectile.ranged = true;            //Is the projectile shoot by a ranged weapon?
             projectile.penetrate = 1;           //How many monsters the projectile can penetrate. (OnTileCollide below also decrements penetrate for bounces as well)
-            projectile.timeLeft = 360;          //The live time for the projectile (60 = 1 second, so 600 is 10 seconds)
+            projectile.timeLeft = 240;          //The live time for the projectile (60 = 1 second, so 600 is 10 seconds)
             projectile.alpha = 200;             //The transparency of the projectile, 255 for completely transparent. (aiStyle 1 quickly fades the projectile in) Make sure to delete this if you aren't using an aiStyle that fades in. You'll wonder why your projectile is invisible.
             projectile.light = 0f;               //How much light emit around the projectile
             projectile.ignoreWater = true;          //Does the projectile's speed be influenced by water?
@@ -41,13 +41,12 @@ namespace OratiumMod.Items.Projectiles
         public override void AI()
         {
 
-            Lighting.AddLight(projectile.position, 0.5f, 0f, 0.2f); // Add Light 
+            Lighting.AddLight(projectile.position, 1f, 0.2f, 0.2f); // Add Light 
 
-            /*  if (projectile.owner == Main.myPlayer && Main.rand.Next(4) == 0)
-              {
-                  Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<BulletTrail>()); // Add Particle
-              }
-              */
+            if (projectile.owner == Main.myPlayer && Main.rand.Next(4) == 0)
+            {
+                Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<HeartStealBulletTrail>()); // Add Particle
+            }
         }
         public override bool OnTileCollide(Vector2 oldVelocity)
         {

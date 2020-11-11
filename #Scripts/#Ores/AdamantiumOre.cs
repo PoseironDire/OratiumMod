@@ -18,7 +18,7 @@ namespace OratiumMod.Items.Ores
             item.useTime = 10;
             item.useStyle = 1;
             item.consumable = true;
-            item.createTile = mod.TileType("BlisterOreBlock");
+            item.createTile = mod.TileType("AdamantiumOreBlock");
         }
         public override void SetStaticDefaults()
         {
