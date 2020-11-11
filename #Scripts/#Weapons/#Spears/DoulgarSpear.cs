@@ -20,7 +20,7 @@ namespace OratiumMod.Items.Weapons.Spears
             item.useAnimation = 24;
             item.useTime = 34;
             item.shootSpeed = 2.7f;
-            item.knockBack = 7f;
+            item.knockBack = 3f;
             item.width = 32;
             item.height = 32;
             item.scale = 1f;
