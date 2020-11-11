@@ -19,7 +19,7 @@ namespace OratiumMod.Items.Weapons.Ammo
             item.height = 8;
             item.ranged = true;
             item.consumable = true;
-            item.knockBack = 10;
+            item.knockBack = 1;
             item.rare = 4;
             item.value = 10;
             item.shoot = ModContent.ProjectileType<Projectiles.HeartStealBulletProjectile>();

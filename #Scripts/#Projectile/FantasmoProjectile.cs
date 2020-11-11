@@ -11,7 +11,7 @@ namespace OratiumMod.Items.Projectiles
         {
             projectile.width = 40;
             projectile.height = 40;
-            projectile.aiStyle = 3;
+            projectile.aiStyle = 1;
             projectile.friendly = true;
             projectile.melee = true;
             projectile.tileCollide = false;
@@ -31,7 +31,7 @@ namespace OratiumMod.Items.Projectiles
 
             Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<Blister>());
         }
-    
+
         public override void AI()
         {
             Lighting.AddLight(projectile.position, 0.5f, 1f, 0.5f);

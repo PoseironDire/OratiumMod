@@ -17,6 +17,5 @@ namespace OratiumMod.Items.Tiles
             drop = mod.ItemType("AdamantiumOre");
             AddMapEntry(new Color(255, 255, 20));
         }
-
     }
 }

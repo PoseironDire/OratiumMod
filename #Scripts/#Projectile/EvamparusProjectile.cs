@@ -16,6 +16,7 @@ namespace OratiumMod.Items.Projectiles
             projectile.friendly = true;
             projectile.melee = true;
             projectile.penetrate = 4;
+            projectile.aiStyle = 1;
             projectile.timeLeft = 100;
             projectile.extraUpdates = 2;
             projectile.tileCollide = true;

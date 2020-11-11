@@ -26,6 +26,7 @@ namespace OratiumMod.Items.Accessories
         {
             player.ammoCost75 = true;
             player.ammoCost80 = true;
+            player.allDamage += 2;
         }
 
         public override void AddRecipes()
