@@ -25,7 +25,10 @@ namespace OratiumMod.Items.Accessories
 
 		public override void UpdateAccessory(Player player, bool hideVisual) 
         {
-			player.allDamage+=2;
+			player.armorPenetration = player.armorPenetration + 5;
+			player.bee = true;
+            player.panic = true;
+
 		}
 
 
