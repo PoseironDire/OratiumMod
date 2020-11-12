@@ -1,4 +1,6 @@
 using OratiumMod.Items.Projectiles;
+using System;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using Microsoft.Xna.Framework;
 using Terraria;
@@ -17,12 +19,12 @@ namespace OratiumMod.Items.Weapons.Bows
 
         public override void SetDefaults()
         {
-            item.damage = 5; // Sets the item's damage. Note that projectiles shot by this weapon will use its and the used ammunition's damage added together.
+            item.damage = 60; // Sets the item's damage. Note that projectiles shot by this weapon will use its and the used ammunition's damage added together.
             item.ranged = true; // sets the damage type to ranged
             item.width = 40; // hitbox width of the item
             item.height = 20; // hitbox height of the item
-            item.useTime = 6; // The item's use time in ticks (60 ticks == 1 second.)
-            item.useAnimation = 7; // The length of the item's use animation in ticks (60 ticks == 1 second.)
+            item.useTime = 16; // The item's use time in ticks (60 ticks == 1 second.)
+            item.useAnimation = 17; // The length of the item's use animation in ticks (60 ticks == 1 second.)
             item.useStyle = ItemUseStyleID.HoldingOut; // how you use the item (swinging, holding out, etc)
             item.noMelee = true; //so the item's animation doesn't do damage
             item.knockBack = 8; // Sets the item's knockback. Note that projectiles shot by this weapon will use its and the used ammunition's knockback added together.
@@ -38,8 +40,7 @@ namespace OratiumMod.Items.Weapons.Bows
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
             type = ProjectileID.VampireKnife;
-
-            int numberProjectiles = 5;
+            int numberProjectiles = 1;
             for (int i = 0; i < numberProjectiles; i++)
             {
                 Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(10));
