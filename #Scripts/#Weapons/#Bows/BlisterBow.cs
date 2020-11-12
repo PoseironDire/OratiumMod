@@ -1,4 +1,3 @@
-using System.Runtime.InteropServices;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -8,6 +7,7 @@ namespace OratiumMod.Items.Weapons.Bows
     {
         public override void SetStaticDefaults()
         {
+            DisplayName.SetDefault("Blister Bow");
             Tooltip.SetDefault("The most op bow you can find.");
         }
 
