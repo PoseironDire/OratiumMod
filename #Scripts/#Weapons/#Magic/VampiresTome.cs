@@ -13,15 +13,14 @@ namespace OratiumMod.Items.Weapons.Magic
 	{
 		public override void SetStaticDefaults() {
 			Tooltip.SetDefault("Vampires Tome");
-			Item.staff[item.type] = true; //this makes the useStyle animate as a staff instead of as a gun
 		}
 
 		public override void SetDefaults() {
 			item.damage = 120;
 			item.magic = true;
 			item.mana = 2;
-			item.width = 40;
-			item.height = 40;
+			item.width = 28;
+			item.height = 38;
 			item.useTime = 8;
 			item.useAnimation = 8;
 			item.useStyle = 5;
