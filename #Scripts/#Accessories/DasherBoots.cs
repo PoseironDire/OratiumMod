@@ -7,12 +7,12 @@ using Terraria.ModLoader;
 namespace OratiumMod.Items.Accessories
 {
 	[AutoloadEquip(EquipType.Shoes)]
-	public class Dasher : ModItem
+	public class DasherBoots : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-            DisplayName.SetDefault("Dasher");
-			Tooltip.SetDefault("Double tap in any cardinal direction to do a dash!");
+            DisplayName.SetDefault("Dasher Boots");
+			Tooltip.SetDefault("Double tap up or down to do a dash!");
 		}
 
 		public override void SetDefaults()
@@ -111,10 +111,10 @@ namespace OratiumMod.Items.Accessories
 		{
 			//ResetEffects() is called not long after player.doubleTapCardinalTimer's values have been set
 			
-			//Check if the Dasher is equipped and also check against this priority:
+			//Check if the DasherBoots is equipped and also check against this priority:
 			// If the Shield of Cthulhu, Master Ninja Gear, Tabi and/or Solar Armour set is equipped, prevent this accessory from doing its dash effect
 			//The priority is used to prevent undesirable effects.
-			//Without it, the player is able to use the Dasher's dash as well as the vanilla ones
+			//Without it, the player is able to use the DasherBoots's dash as well as the vanilla ones
 			bool dashAccessoryEquipped = false;
 
 			//This is the loop used in vanilla to update/check the not-vanity accessories
@@ -122,15 +122,15 @@ namespace OratiumMod.Items.Accessories
 			{
 				Item item = player.armor[i];
 
-				//Set the flag for the Dasher being equipped if we have it equipped OR immediately return if any of the accessories are
+				//Set the flag for the DasherBoots being equipped if we have it equipped OR immediately return if any of the accessories are
 				// one of the higher-priority ones
-				if(item.type == ModContent.ItemType<Dasher>())
+				if(item.type == ModContent.ItemType<DasherBoots>())
 					dashAccessoryEquipped = true;
 				else if(item.type == ItemID.EoCShield || item.type == ItemID.MasterNinjaGear || item.type == ItemID.Tabi)
 					return;
 			}
 
-			//If we don't have the Dasher equipped or the player has the Solor armor set equipped, return immediately
+			//If we don't have the DasherBoots equipped or the player has the Solor armor set equipped, return immediately
 			//Also return if the player is currently on a mount, since dashes on a mount look weird, or if the dash was already activated
 			if(!dashAccessoryEquipped || player.setSolar || player.mount.Active || DashActive)
 				return;

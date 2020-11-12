@@ -11,7 +11,8 @@ namespace OratiumMod.Items.Accessories
 
 		public override void SetStaticDefaults() 
         {
-			Tooltip.SetDefault("Increases armor penetration by 5 Releases bees and douses the user in honey when damaged it also increases movement speed after taking damage");
+			Tooltip.SetDefault("Increases armor penetration by 5 \nReleases bees and douses the user in honey when damaged \nIncreases movement speed after taking damage");
+			
             DisplayName.SetDefault("Stninger Reflex Necklace");
 		}
 
