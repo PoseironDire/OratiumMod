@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -37,6 +38,13 @@ namespace OratiumMod.Items.Accessories
             recipe.AddTile(TileID.TinkerersWorkbench);
             recipe.SetResult(this);
             recipe.AddRecipe();
+
+			ModRecipe recipe2 = new ModRecipe(mod);
+			recipe2.AddIngredient(ItemID.SharkToothNecklace);
+			recipe2.AddIngredient(ItemID.SweetheartNecklace);
+            recipe2.AddTile(TileID.TinkerersWorkbench);
+            recipe2.SetResult(this);
+            recipe2.AddRecipe();
 		}
 	}
 }
