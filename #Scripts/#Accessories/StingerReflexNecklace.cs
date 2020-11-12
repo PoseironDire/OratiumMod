@@ -33,8 +33,8 @@ namespace OratiumMod.Items.Accessories
 			 ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.PanicNecklace);
             recipe.AddIngredient(ItemID.HoneyComb);
-            //recipe.AddIngredient(ItemID.SharktoothNecklace);
-            recipe.AddTile(TileID.Anvils);
+            recipe.AddIngredient(ItemID.SharkToothNecklace);
+            recipe.AddTile(TileID.TinkerersWorkbench);
             recipe.SetResult(this);
             recipe.AddRecipe();
 		}
