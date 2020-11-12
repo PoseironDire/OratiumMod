@@ -10,6 +10,7 @@ namespace OratiumMod.Items.Weapons.Guns
     {
         public override void SetStaticDefaults()
         {
+            DisplayName.SetDefault("Test Sniper.");
             Tooltip.SetDefault("A strong sniper.");
         }
 
