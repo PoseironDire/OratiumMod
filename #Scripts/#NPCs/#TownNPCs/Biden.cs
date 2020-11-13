@@ -76,6 +76,22 @@ namespace OratiumMod.Items.NPCs.TownNPCs
 			}
 			return false;
 		}
+		        public override void OnChatButtonClicked(bool firstButton, ref bool shop)
+        {
+            if (firstButton)
+            {
+                shop = true;
+            }
+            else
+            {
+                Main.npcChatText = "Hmm Vad Ska Stå Här?";
+            }
+        }
+        public override void SetupShop(Chest shop, ref int nextSlot)
+        {
+            shop.item[nextSlot].SetDefaults(mod.ItemType("BlisterBar"));
+            nextSlot++;
+        }
 
 /*
 		// Example Person needs a house built out of OratiumMod tiles. You can delete this whole method in your townNPC for the regular house conditions.
