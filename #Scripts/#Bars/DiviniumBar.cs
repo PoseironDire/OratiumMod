@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace OratiumMod.Items.Bars
 {
-    public class AdamantiumBar : ModItem
+    public class DiviniteBar : ModItem
     {
         public override void SetDefaults()
         {
@@ -13,13 +13,13 @@ namespace OratiumMod.Items.Bars
         }
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Adamantium Bar");
-            Tooltip.SetDefault("'Heavy & strong!'");
+            DisplayName.SetDefault("Divinite Bar");
+            Tooltip.SetDefault("'¤Has]Been?Avoid?!'");
         }
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod.ItemType("AdamantiumOre"), 3);
+            recipe.AddIngredient(mod.ItemType("DiviniteOre"), 3);
             recipe.AddTile(TileID.Furnaces);
             recipe.SetResult(this);
             recipe.AddRecipe();

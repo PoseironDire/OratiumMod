@@ -7,7 +7,7 @@ namespace OratiumMod.Items.Bars
     {
         public override void SetDefaults()
         {
-            item.maxStack = 99;
+            item.maxStack = 999;
             item.value = 9000;
             item.rare = 4;
         }
