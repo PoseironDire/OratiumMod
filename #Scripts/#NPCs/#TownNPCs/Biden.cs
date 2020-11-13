@@ -61,22 +61,25 @@ namespace OratiumMod.Items.NPCs.TownNPCs
 			}
 		}
 
-		public override bool CanTownNPCSpawn(int numTownNPCs, int money) {
-			for (int k = 0; k < 255; k++) {
-				Player player = Main.player[k];
-				if (!player.active) {
-					continue;
-				}
-
-				foreach (Item item in player.inventory) {
-					if (item.type == ModContent.ItemType<BlisterBar>() || item.type == ModContent.ItemType<DoulgarSpear>()) {
-						return true;
-					}
-				}
-			}
-			return false;
-		}
-		        public override void OnChatButtonClicked(bool firstButton, ref bool shop)
+	 public override bool CanTownNPCSpawn(int numTownNPCs, int money) //Whether or not the conditions have been met for this town NPC to be able to move into town.
+        {
+            if (NPC.downedBoss1)  //so after the EoC is killed
+            {
+                return true;
+            }
+            return false;
+        }
+		  public override bool CheckConditions(int left, int right, int top, int bottom)    //Allows you to define special conditions required for this town NPC's house
+        {
+            return true;  //so when a house is available the npc will  spawn
+        }
+		public override void SetChatButtons(ref string button, ref string button2)
+        {
+            button = Language.GetTextValue("LegacyInterface.28");
+            button2 = "Button Name";
+        }
+	
+		public override void OnChatButtonClicked(bool firstButton, ref bool shop)
         {
             if (firstButton)
             {
@@ -90,6 +93,8 @@ namespace OratiumMod.Items.NPCs.TownNPCs
         public override void SetupShop(Chest shop, ref int nextSlot)
         {
             shop.item[nextSlot].SetDefaults(mod.ItemType("BlisterBar"));
+            nextSlot++;
+			shop.item[nextSlot].SetDefaults(mod.ItemType("BlisterPickaxe"));
             nextSlot++;
         }
 
