@@ -9,30 +9,32 @@ using Terraria.ModLoader;
 
 namespace OratiumMod.Items.Weapons.Magic
 {
-	public class VampiresTome : ModItem
-	{
-		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Vampires Tome");
-		}
+    public class VampiresTome : ModItem
+    {
+        public override void SetStaticDefaults()
+        {
+            Tooltip.SetDefault("Vampires Tome");
+        }
 
-		public override void SetDefaults() {
-			item.damage = 120;
-			item.magic = true;
-			item.mana = 4;
-			item.width = 28;
-			item.height = 38;
-			item.useTime = 16;
-			item.useAnimation = 17;
-			item.useStyle = 5;
-			item.noMelee = true; //so the item's animation doesn't do damage
-			item.knockBack = 5;
-			item.value = 10000;
-			item.rare = ItemRarityID.Green;
-			item.UseSound = SoundID.Item20;
-			item.autoReuse = true;
-			item.shootSpeed = 12f;
-            item.shoot=ProjectileID.VampireKnife;
-		}
+        public override void SetDefaults()
+        {
+            item.damage = 120;
+            item.magic = true;
+            item.mana = 4;
+            item.width = 28;
+            item.height = 38;
+            item.useTime = 16;
+            item.useAnimation = 17;
+            item.useStyle = 5;
+            item.noMelee = true; //so the item's animation doesn't do damage
+            item.knockBack = 5;
+            item.value = 10000;
+            item.rare = ItemRarityID.Green;
+            item.UseSound = SoundID.Item20;
+            item.autoReuse = true;
+            item.shootSpeed = 14f;
+            item.shoot = ProjectileID.VampireKnife;
+        }
 
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
@@ -46,7 +48,7 @@ namespace OratiumMod.Items.Weapons.Magic
             }
             return false;
         }
-        
+
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
@@ -56,6 +58,6 @@ namespace OratiumMod.Items.Weapons.Magic
             recipe.SetResult(this);
             recipe.AddRecipe();
         }
-		
-	}
+
+    }
 }
