@@ -8,8 +8,8 @@ namespace OratiumMod.Items.Bars
         public override void SetDefaults()
         {
             item.maxStack = 999;
-            item.value = 9000;
-            item.rare = 4;
+            item.value = 12000;
+            item.rare = 6;
         }
         public override void SetStaticDefaults()
         {

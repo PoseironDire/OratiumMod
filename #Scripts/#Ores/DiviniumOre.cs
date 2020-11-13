@@ -8,9 +8,9 @@ namespace OratiumMod.Items.Ores
         public override void SetDefaults()
         {
             item.maxStack = 999;
-            item.value = 3000;
+            item.value = 4000;
             item.width = 40;
-            item.rare = 4;
+            item.rare = 6;
             item.height = 40;
             item.useTurn = true;
             item.autoReuse = true;
