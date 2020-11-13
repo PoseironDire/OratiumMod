@@ -7,6 +7,11 @@ namespace OratiumMod.Items.Projectiles
 {
     public class BlisterDriftersProjectile : ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Blister Drifters");
+        }
+
         public override void SetDefaults()
         {
             projectile.width = 20;
@@ -19,10 +24,7 @@ namespace OratiumMod.Items.Projectiles
             projectile.timeLeft = 1000;
             projectile.extraUpdates = 2;
         }
-        public override void SetStaticDefaults()
-        {
-            DisplayName.SetDefault("Blister Drifters");
-        }
+        
         public override void AI()
         {
             Lighting.AddLight(projectile.position, 0f, 1f, 0f);

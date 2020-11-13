@@ -7,6 +7,11 @@ namespace OratiumMod.Items.Projectiles
 {
     public class BlisterThrowingScytheProjectile : ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Blister Throwing Scythe");
+        }
+
         public override void SetDefaults()
         {
             projectile.width = 20;
@@ -20,10 +25,7 @@ namespace OratiumMod.Items.Projectiles
             projectile.timeLeft = 1000;
             projectile.extraUpdates = 2;
         }
-        public override void SetStaticDefaults()
-        {
-            DisplayName.SetDefault("BlisterThrowingScythe");
-        }
+        
         public override void AI()
         {
             Lighting.AddLight(projectile.position, 0.5f, 1f, 0.5f);

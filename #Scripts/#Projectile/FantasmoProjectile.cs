@@ -7,6 +7,11 @@ namespace OratiumMod.Items.Projectiles
 {
     public class FantasmoProjectile : ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Fantasmo");
+        }
+
         public override void SetDefaults()
         {
             projectile.width = 40;
@@ -20,10 +25,7 @@ namespace OratiumMod.Items.Projectiles
             projectile.timeLeft = 1000;
             projectile.extraUpdates = 1;
         }
-        public override void SetStaticDefaults()
-        {
-            DisplayName.SetDefault("Fantasmo");
-        }
+        
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
             Main.PlaySound(SoundID.Item12);

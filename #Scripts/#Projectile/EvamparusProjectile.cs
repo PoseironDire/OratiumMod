@@ -9,6 +9,11 @@ namespace OratiumMod.Items.Projectiles
 {
     public class EvamparusProjectile : ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Evamparus");
+        }
+
         public override void SetDefaults()
         {
             projectile.width = 10;
@@ -22,10 +27,7 @@ namespace OratiumMod.Items.Projectiles
             projectile.tileCollide = true;
             projectile.ignoreWater = true;
         }
-        public override void SetStaticDefaults()
-        {
-            DisplayName.SetDefault("EvamparusProjectile");
-        }
+        
         public override bool OnTileCollide(Vector2 oldVelocity)
         {
             //If collide with tile, reduce the penetrate.

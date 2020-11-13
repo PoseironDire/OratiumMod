@@ -33,7 +33,7 @@ namespace OratiumMod.Items.Armor
         {
             player.setBonus = "Increased throwing crit and velocity";
             player.thrownCost33 = true;
-            player.thrownVelocity += 6;
+            player.thrownVelocity += 4;
             player.thrownCrit += 12;
         }
         public override void AddRecipes()

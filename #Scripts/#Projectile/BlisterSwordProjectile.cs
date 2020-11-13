@@ -9,6 +9,12 @@ namespace OratiumMod.Items.Projectiles
 {
     public class BlisterSwordProjectile : ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            Main.projFrames[projectile.type] = 4;
+            DisplayName.SetDefault("Blister Sword");
+        }
+
         public override void SetDefaults()
         {
             projectile.width = 10;
@@ -22,11 +28,7 @@ namespace OratiumMod.Items.Projectiles
             projectile.tileCollide = false;
             projectile.ignoreWater = true;
         }
-        public override void SetStaticDefaults()
-        {
-            Main.projFrames[projectile.type] = 4;
-            DisplayName.SetDefault("BlisterSwordProjectile");
-        }
+        
         public override bool OnTileCollide(Vector2 oldVelocity)
         {
             //If collide with tile, reduce the penetrate.

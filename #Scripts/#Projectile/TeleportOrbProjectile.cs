@@ -9,6 +9,11 @@ namespace OratiumMod.Items.Projectiles
 {
     public class TeleportOrbProjectile : ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Teleportation Orb");
+        }
+        
         public override void SetDefaults()
         {
             projectile.width = 15;
@@ -30,10 +35,6 @@ namespace OratiumMod.Items.Projectiles
             }
             return false;
 
-        }
-        public override void SetStaticDefaults()
-        {
-            DisplayName.SetDefault("Teleportation Orb");
         }
         public override void AI()
         {
