@@ -30,7 +30,7 @@ namespace OratiumMod.Items.Weapons.Magic
 			item.rare = ItemRarityID.Green;
 			item.UseSound = SoundID.Item20;
 			item.autoReuse = true;
-			item.shootSpeed = 12f;
+			item.shootSpeed = 14f;
             item.shoot=ProjectileID.VampireKnife;
 		}
 
