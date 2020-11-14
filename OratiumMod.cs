@@ -4,6 +4,5 @@ namespace OratiumMod
 {
     public class OratiumMod : Mod
     {
-
     }
 }
