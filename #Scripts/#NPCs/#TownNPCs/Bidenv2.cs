@@ -203,31 +203,7 @@ namespace OratiumMod.Items.NPCs.TownNPCs
             shop.item[nextSlot].SetDefaults(mod.ItemType("BlisterBar"));
             nextSlot++;
         }
-       
 /*
-		public override void SetupShop(Chest shop, ref int nextSlot) 
-        {
-            
-			shop.item[nextSlot].SetDefaults(ModContent.ItemType<ExampleItem>());
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(ModContent.ItemType<EquipMaterial>());
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(ModContent.ItemType<BossItem>());
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Placeable.ExampleWorkbench>());
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Placeable.ExampleChair>());
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Placeable.ExampleDoor>());
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Placeable.ExampleBed>());
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Placeable.ExampleChest>());
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(ModContent.ItemType<ExamplePickaxe>());
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(ModContent.ItemType<ExampleHamaxe>());
-			nextSlot++;
 			if (Main.LocalPlayer.HasBuff(BuffID.Lifeforce)) {
 				shop.item[nextSlot].SetDefaults(ModContent.ItemType<ExampleHealingPotion>());
 				nextSlot++;
@@ -250,37 +226,13 @@ namespace OratiumMod.Items.NPCs.TownNPCs
 				shop.item[nextSlot].SetDefaults(ModContent.ItemType<ExampleStaff>());
 				nextSlot++;
 			}
-			else {
-			}
-			// Here is an example of how your npc can sell items from other mods.
-			var modSummonersAssociation = ModLoader.GetMod("SummonersAssociation");
-			if (modSummonersAssociation != null) {
-				shop.item[nextSlot].SetDefaults(modSummonersAssociation.ItemType("BloodTalisman"));
-				nextSlot++;
-			}
-
-			if (!Main.LocalPlayer.GetModPlayer<ExamplePlayer>().BidenGiftReceived && ModContent.GetInstance<ExampleConfigServer>().BidenFreeGiftList != null)
-			{
-				foreach (var item in ModContent.GetInstance<ExampleConfigServer>().BidenFreeGiftList)
-				{
-					if (item.IsUnloaded)
-						continue;
-					shop.item[nextSlot].SetDefaults(item.Type);
-					shop.item[nextSlot].shopCustomPrice = 0;
-					shop.item[nextSlot].GetGlobalItem<ExampleInstancedGlobalItem>().BidenFreeGift = true;
-					nextSlot++;
-					// TODO: Have tModLoader handle index issues.
-				}	
-			}
-            
-		}
 */
+
         public override void NPCLoot()
         {
             Item.NewItem(npc.getRect(), ModContent.ItemType<Items.Accessories.AmmoBag>());
         }
-
-        /*
+        
                 public override void TownNPCAttackStrength(ref int damage, ref float knockback) {
                     damage = 20;
                     knockback = 4f;
@@ -292,7 +244,7 @@ namespace OratiumMod.Items.NPCs.TownNPCs
                 }
 
                 public override void TownNPCAttackProj(ref int projType, ref int attackDelay) {
-                    projType = ModContent.ProjectileType<Sparkle>();
+                    projType = ModContent.ProjectileType<AdamantiumBulletProjectile>();
                     attackDelay = 1;
                 }
 
@@ -300,6 +252,5 @@ namespace OratiumMod.Items.NPCs.TownNPCs
                     multiplier = 12f;
                     randomOffset = 2f;
                 }
-                */
     }
 }
