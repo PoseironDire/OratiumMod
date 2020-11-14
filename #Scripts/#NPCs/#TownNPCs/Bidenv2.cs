@@ -15,7 +15,7 @@ namespace OratiumMod.Items.NPCs.TownNPCs
 {
     // [AutoloadHead] and npc.townNPC are extremely important and absolutely both necessary for any Town NPC to work at all.
     [AutoloadHead]
-    public class Bidenv2 : ModNPC
+    public class Biden : ModNPC
     {
         public override string Texture => "OratiumMod/Items/NPCs/TownNPCs/Biden";
 
@@ -23,7 +23,7 @@ namespace OratiumMod.Items.NPCs.TownNPCs
 
         public override bool Autoload(ref string name)
         {
-            name = "President v2";
+            name = "President";
             return mod.Properties.Autoload;
         }
 
@@ -112,11 +112,11 @@ namespace OratiumMod.Items.NPCs.TownNPCs
                 case 0:
                     return "Biden";
                 case 1:
-                    return "Biden";
+                    return "Joe";
                 case 2:
-                    return "Biden";
+                    return "Joe Biden";
                 default:
-                    return "Biden";
+                    return "Mr. Biden";
             }
         }
 
@@ -146,32 +146,56 @@ namespace OratiumMod.Items.NPCs.TownNPCs
                     return "Sometimes I feel like I'm different from everyone else here.";
                 case 1:
                     return "What's your favorite color? My favorite colors are white and black.";
-                /*
                 case 2:
-					{
-						// Main.npcChatCornerItem shows a single item in the corner, like the Angler Quest chat.
-						Main.npcChatCornerItem = ItemID.HiveBackpack;
-						return $"Hey, if you find a [i:{ItemID.HiveBackpack}], I can upgrade it for you.";
-					}
-                    */
+						return "Hey you, ask Trump what the Wifi Password is in The White House";
                 default:
                     return "Will you shut up man.";
             }
         }
+        bool upgrade = true;
         public override void SetChatButtons(ref string button, ref string button2)
         {
             button = Language.GetTextValue("LegacyInterface.28");
-            button2 = "Button Name";
+            if (upgrade == true)
+            {
+            button2 = "Deal";
+            if (Main.LocalPlayer.HasItem(ItemID.TerraBlade))
+            button = "Upgrade! " + Lang.GetItemNameValue(ItemID.TerraBlade);
+            }
         }
         public override void OnChatButtonClicked(bool firstButton, ref bool shop)
         {
             if (firstButton)
             {
+                 if (upgrade == true)
+            {
+                // We want 3 different functionalities for chat buttons, so we use HasItem to change button 1 between a shop and upgrade action.
+				if (Main.LocalPlayer.HasItem(ItemID.TerraBlade))
+                {
+                    Main.PlaySound(SoundID.Item37); // Reforge/Anvil sound
+					Main.npcChatText = $"I upgraded your {Lang.GetItemNameValue(ItemID.TerraBlade)} to a {Lang.GetItemNameValue(ModContent.ItemType<Items.Weapons.Swords.Deathbringer>())}";
+                    int terraBladeItemIndex = Main.LocalPlayer.FindItem(ItemID.TerraBlade);
+                    Main.LocalPlayer.inventory[terraBladeItemIndex].TurnToAir();
+					Main.LocalPlayer.QuickSpawnItem(ModContent.ItemType<Items.Weapons.Swords.Deathbringer>());
+                    upgrade = false;
+                    return;
+                }
+            }
                 shop = true;
             }
             else
             {
-                Main.npcChatText = "Hmm Vad Ska Stå Här?";
+                 if (upgrade == true)
+            {
+                // Main.npcChatCornerItem shows a single item in the corner, like the Angler Quest chat.
+                Main.npcChatCornerItem = ItemID.TerraBlade;
+                Main.npcChatText = $"Hey, if you find a [i:{ItemID.TerraBlade}], I can make you an upgraded version.";
+                shop = false;
+            }
+            }
+            if (upgrade == false)
+            {
+                shop = true;
             }
         }
         public override void SetupShop(Chest shop, ref int nextSlot)
@@ -179,63 +203,7 @@ namespace OratiumMod.Items.NPCs.TownNPCs
             shop.item[nextSlot].SetDefaults(mod.ItemType("BlisterBar"));
             nextSlot++;
         }
-
-
-        /* 
-		// Consider using this alternate approach to choosing a random thing. Very useful for a variety of use cases.
-		// The WeightedRandom class needs "using Terraria.Utilities;" to use
-		public override string GetChat()
-		{
-			WeightedRandom<string> chat = new WeightedRandom<string>();
-			int partyGirl = NPC.FindFirstNPC(NPCID.PartyGirl);
-			if (partyGirl >= 0 && Main.rand.NextBool(4))
-			{
-				chat.Add("Can you please tell " + Main.npc[partyGirl].GivenName + " to stop decorating my house with colors?");
-			}
-			chat.Add("Sometimes I feel like I'm different from everyone else here.");
-			chat.Add("What's your favorite color? My favorite colors are white and black.");
-			chat.Add("What? I don't have any arms or legs? Oh, don't be ridiculous!");
-			chat.Add("This message has a weight of 5, meaning it appears 5 times more often.", 5.0);
-			chat.Add("This message has a weight of 0.1, meaning it appears 10 times as rare.", 0.1);
-			return chat; // chat is implicitly cast to a string. You can also do "return chat.Get();" if that makes you feel better
-		}
-		*/
-
-        /*
-                public override void SetChatButtons(ref string button, ref string button2) {
-                    button = Language.GetTextValue("LegacyInterface.28");
-                    button2 = "Awesomeify";
-                    if (Main.LocalPlayer.HasItem(ItemID.HiveBackpack))
-                        button = "Upgrade " + Lang.GetItemNameValue(ItemID.HiveBackpack);
-                }
-                */
-        /*
-		public override void OnChatButtonClicked(bool firstButton, ref bool shop) 
-        {
-			if (firstButton) {
-				// We want 3 different functionalities for chat buttons, so we use HasItem to change button 1 between a shop and upgrade action.
-				if (Main.LocalPlayer.HasItem(ItemID.HiveBackpack))
-				{
-					Main.PlaySound(SoundID.Item37); // Reforge/Anvil sound
-					Main.npcChatText = $"I upgraded your {Lang.GetItemNameValue(ItemID.HiveBackpack)} to a {Lang.GetItemNameValue(ModContent.ItemType<Items.Accessories.WaspNest>())}";
-					int hiveBackpackItemIndex = Main.LocalPlayer.FindItem(ItemID.HiveBackpack);
-					Main.LocalPlayer.inventory[hiveBackpackItemIndex].TurnToAir();
-					Main.LocalPlayer.QuickSpawnItem(ModContent.ItemType<Items.Accessories.WaspNest>());
-					return;
-				}
-				shop = false;
-			}
-			else {
-				// If the 2nd button is pressed, open the inventory...
-				Main.playerInventory = true;
-				// remove the chat window...
-				Main.npcChatText = "";
-				// and start an instance of our UIState.
-				ModContent.GetInstance<OratiumMod>().BidenUserInterface.SetState(new UI.BidenUI());
-				// Note that even though we remove the chat window, Main.LocalPlayer.talkNPC will still be set correctly and we are still technically chatting with the npc.
-			}
-                
-		}
+       
 /*
 		public override void SetupShop(Chest shop, ref int nextSlot) 
         {

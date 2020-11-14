@@ -1,3 +1,4 @@
+using OratiumMod.Items.Dusts;
 using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -23,6 +24,9 @@ namespace OratiumMod.Items.Projectiles
             projectile.thrown = true;
             projectile.penetrate = 2;      //this is how many enemy this projectile penetrate before desapear 
             projectile.extraUpdates = 1;
+            projectile.timeLeft = 400;
+            projectile.alpha = 155;             //The transparency of the projectile, 255 for completely transparent. (aiStyle 1 quickly fades the projectile in) Make sure to delete this if you aren't using an aiStyle that fades in. You'll wonder why your projectile is invisible.
+			projectile.light = 0.5f;            
             aiType = ProjectileID.Shuriken;
         }
  
@@ -38,9 +42,9 @@ namespace OratiumMod.Items.Projectiles
         public override bool OnTileCollide(Vector2 oldVelocity)
         {                                                           // sound that the projectile make when hiting the terrain
             {
-                projectile.Kill();
- 
+                Dust.NewDust(projectile.position, projectile.width, projectile.height, 53);
                 Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 10);
+                projectile.Kill();
             }
             return false;
         }

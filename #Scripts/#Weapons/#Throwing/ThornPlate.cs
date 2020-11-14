@@ -12,29 +12,29 @@ namespace OratiumMod.Items.Weapons.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Teleportation Orb");
+            DisplayName.SetDefault("Thorn Plate");
         }
         
         public override void SetDefaults()
         {
-            item.damage = 30;           //this is the item damage
+            item.damage = 30;       
             item.thrown = true;             //this make the item do throwing damage
             item.noMelee = true;
             item.width = 20;
             item.height = 20;
-            item.useTime = 10;       //this is how fast you use the item
-            item.useAnimation = 11;   //this is how fast the animation when the item is used
-            item.useStyle = 1;      
+            item.useTime = 9;      
+            item.useAnimation = 9; 
+            item.useStyle = 2;      
             item.knockBack = 6;
             item.value = 10;
-            item.rare = 1;
-            item.reuseDelay = 20;    //this is the item delay
+            item.rare = 6;
+            item.reuseDelay = 9;    //this is the item delay
             item.UseSound = SoundID.Item1;
-            item.autoReuse = true;       //this make the item auto reuse
+            item.autoReuse = false;       //this make the item auto reuse
             item.shoot = mod.ProjectileType("ThornPlateProjectile");  //javelin projectile
-            item.shootSpeed = 10f;     //projectile speed
+            item.shootSpeed = 8f;   
             item.useTurn = true;
-            item.maxStack = 999;       //this is the max stack of this item
+            item.maxStack = 999;      
             item.consumable = true;  //this make the item consumable when used
             item.noUseGraphic = true;
                        
@@ -44,7 +44,7 @@ namespace OratiumMod.Items.Weapons.Throwing
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(mod.ItemType("DiviniteOre"), 1);
             recipe.AddTile(TileID.WorkBenches);
-            recipe.SetResult(this);
+            recipe.SetResult(this, 25);
             recipe.AddRecipe();
         }
     }
