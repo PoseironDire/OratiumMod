@@ -1,7 +1,3 @@
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using OratiumMod.Items.Projectiles;
-using System.Runtime.InteropServices;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -18,7 +14,7 @@ namespace OratiumMod.Items.Weapons.Magic
 
         public override void SetDefaults()
         {
-            item.damage = 120;
+            item.damage = 70;
             item.knockBack = 4; 
             item.crit = 4; 
             item.mana = 6;
@@ -39,8 +35,8 @@ namespace OratiumMod.Items.Weapons.Magic
 
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
-			float numberProjectiles = 4 + Main.rand.Next(4); // 3, 4, or 5 shots
-			float rotation = MathHelper.ToRadians(45);
+			float numberProjectiles = 2 + Main.rand.Next(3); // 3, 4, or 5 shots
+			float rotation = MathHelper.ToRadians(15);
 			position += Vector2.Normalize(new Vector2(speedX, speedY)) * 45f;
 			for (int i = 0; i < numberProjectiles; i++)
 			{
