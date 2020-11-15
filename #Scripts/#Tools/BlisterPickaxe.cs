@@ -19,6 +19,7 @@ namespace OratiumMod.Items.Tools
             item.useTime = 1;
             item.useAnimation = 8;
             item.UseSound = SoundID.Item1;
+            item.scale = 1.3f;
             item.melee = true;
             item.autoReuse = true;
             item.useTurn = true;
