@@ -15,7 +15,7 @@ namespace OratiumMod.Items.Weapons.Ammo
         {
             item.maxStack = 999;
             item.damage = 14;
-            item.knockBack = 10;
+            item.knockBack = 2;
             item.crit = 4;
             item.width = 8;
             item.height = 8;

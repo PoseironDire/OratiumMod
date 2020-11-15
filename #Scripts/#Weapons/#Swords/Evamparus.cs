@@ -37,9 +37,7 @@ namespace OratiumMod.Items.Weapons.Swords
         {
             if (Main.rand.NextBool(3))
             {
-                Lighting.AddLight(player.position, 0.1f, 0.1f, 0.5f);
-
-                Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<BlueSmall>());
+                Lighting.AddLight(player.position, 0f, 0f, 0.5f);
             }
         }
     }

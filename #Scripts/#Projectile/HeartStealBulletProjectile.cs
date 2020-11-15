@@ -32,14 +32,14 @@ namespace OratiumMod.Items.Projectiles
 
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit) // Lifesteal effect
         {
-            int lifeSteal = damage / 3; // Lifesteal vlue
+            int lifeSteal = damage / 10; // Lifesteal vlue
             Main.player[projectile.owner].statLife += lifeSteal; // Lifesteal function
             Main.player[projectile.owner].HealEffect(lifeSteal, true); // Green number display
         }
 
         public override void AI()
         {
-            Lighting.AddLight(projectile.position, 1f, 0.2f, 0.2f); // Add Light 
+            Lighting.AddLight(projectile.position, 0.3f, 0.05f, 0.3f); // Add Light 
 
             if (projectile.owner == Main.myPlayer && Main.rand.Next(4) == 0)
             {

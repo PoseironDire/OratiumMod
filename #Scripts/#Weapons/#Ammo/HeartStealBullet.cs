@@ -14,8 +14,8 @@ namespace OratiumMod.Items.Weapons.Ammo
         public override void SetDefaults()
         {
             item.maxStack = 999;
-            item.damage = 7;
-            item.knockBack = 10;
+            item.damage = 5;
+            item.knockBack = 2;
             item.crit = 4;
             item.width = 8;
             item.height = 8;

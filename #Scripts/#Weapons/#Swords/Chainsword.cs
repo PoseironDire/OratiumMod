@@ -16,7 +16,7 @@ namespace OratiumMod.Items.Weapons.Swords
 
         public override void SetDefaults()
         {
-            item.damage = 180;
+            item.damage = 220;
             item.knockBack = 10;
             item.crit = 30;
             item.axe = 25;
@@ -29,7 +29,7 @@ namespace OratiumMod.Items.Weapons.Swords
             item.useAnimation = 32;
             item.UseSound = SoundID.Item1;
             item.melee = true;
-            item.autoReuse = true;
+            item.autoReuse = false;
         }
 
         public override void MeleeEffects(Player player, Rectangle hitbox)
@@ -40,11 +40,6 @@ namespace OratiumMod.Items.Weapons.Swords
 
                 Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<YellowSmall>());
             }
-        }
-
-        public override Vector2? HoldoutOffset()
-        {
-            return new Vector2(-10, +1);
         }
 
            public override void AddRecipes()

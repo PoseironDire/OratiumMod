@@ -34,14 +34,14 @@ namespace OratiumMod.Items.Projectiles
 
             Main.PlaySound(SoundID.Item10, projectile.position);
 
-            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<PurpleStrong>());
-            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<PurpleStrong>());
-            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<PurpleStrong>());
-            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<PurpleStrong>());
-            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<PurpleStrong>());
-            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<PurpleStrong>());
-            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<PurpleStrong>());
-            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<PurpleStrong>());
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<BlueStrong>());
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<BlueStrong>());
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<BlueStrong>());
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<BlueStrong>());
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<BlueStrong>());
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<BlueStrong>());
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<BlueStrong>());
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<BlueStrong>());
 
             return false;
         }
