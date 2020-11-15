@@ -34,7 +34,14 @@ namespace OratiumMod.Items.Projectiles
 
             Main.PlaySound(SoundID.Item10, projectile.position);
 
-            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<ArcaneCloud>());
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<PurpleStrong>());
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<PurpleStrong>());
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<PurpleStrong>());
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<PurpleStrong>());
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<PurpleStrong>());
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<PurpleStrong>());
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<PurpleStrong>());
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<PurpleStrong>());
 
             return false;
         }
@@ -47,7 +54,7 @@ namespace OratiumMod.Items.Projectiles
 
             if (projectile.owner == Main.myPlayer && Main.rand.Next(4) == 0)
             {
-                Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<Sparkle>());
+                Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<BlueSmall>());
             }
         }
     }

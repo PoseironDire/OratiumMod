@@ -43,7 +43,7 @@ namespace OratiumMod.Items.Projectiles
 
             if (projectile.owner == Main.myPlayer && Main.rand.Next(4) == 0)
             {
-                Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<HeartStealBulletTrail>()); // Add Particle
+                Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<PinkSmall>()); // Add Particle
             }
         }
     }

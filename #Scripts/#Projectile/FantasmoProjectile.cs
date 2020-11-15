@@ -17,7 +17,7 @@ namespace OratiumMod.Items.Projectiles
             projectile.width = 40;
             projectile.height = 40;
             projectile.aiStyle = 3;
-            projectile.penetrate = 2;
+            projectile.penetrate = 4;
             projectile.timeLeft = 1000;
             projectile.extraUpdates = 1;
             projectile.melee = true;
@@ -32,7 +32,7 @@ namespace OratiumMod.Items.Projectiles
 
             Lighting.AddLight(projectile.position, 1f, 0.0f, 2f);
 
-            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<Blister>());
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<GreenSmall>());
         }
 
         public override void AI()
@@ -41,7 +41,7 @@ namespace OratiumMod.Items.Projectiles
 
             if (projectile.owner == Main.myPlayer && Main.rand.Next(4) == 0)
             {
-                Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<Blister>());
+                Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<GreenSmall>());
             }
         }
     }

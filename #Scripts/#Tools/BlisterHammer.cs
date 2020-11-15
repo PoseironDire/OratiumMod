@@ -13,7 +13,7 @@ namespace OratiumMod.Items.Tools
 
         public override void SetDefaults()
         {
-            item.damage = 20;
+            item.damage = 17;
             item.knockBack = 6;
             item.crit = 4;
             item.hammer = 85;

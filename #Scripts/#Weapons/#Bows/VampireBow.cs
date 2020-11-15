@@ -27,14 +27,14 @@ namespace OratiumMod.Items.Weapons.Bows
             item.rare = 4; // the color that the item's name will be in-game
             item.useStyle = ItemUseStyleID.HoldingOut; // how you use the item (swinging, holding out, etc)
             item.useTime = 15; // The item's use time in ticks (60 ticks == 1 second.)
-            item.useAnimation = 20; // The length of the item's use animation in ticks (60 ticks == 1 second.)
+            item.useAnimation = 16; // The length of the item's use animation in ticks (60 ticks == 1 second.)
             item.UseSound = SoundID.Item5; // The sound that this item plays when used.
             item.shoot = 10; //idk why but all the guns in the vanilla source have this
             item.shootSpeed = 35f; // the speed of the projectile (measured in pixels per frame)
             item.useAmmo = AmmoID.Arrow; // The "ammo Id" of the ammo item that this weapon uses. Note that this is not an item Id, but just a magic value.
             item.ranged = true; // sets the damage type to ranged
             item.noMelee = true; //so the item's animation doesn't do damage
-            item.autoReuse = false; // if you can hold click to automatically use it again
+            item.autoReuse = true; // if you can hold click to automatically use it again
         }
 
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)

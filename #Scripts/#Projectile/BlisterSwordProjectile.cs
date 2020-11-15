@@ -11,7 +11,7 @@ namespace OratiumMod.Items.Projectiles
     {
         public override void SetStaticDefaults()
         {
-            Main.projFrames[projectile.type] = 4;
+            // Main.projFrames[projectile.type] = 4;
             DisplayName.SetDefault("Blister Sword Projectile");
         }
 
@@ -19,7 +19,7 @@ namespace OratiumMod.Items.Projectiles
         {
             projectile.width = 10;
             projectile.height = 20;
-            projectile.penetrate = 2;
+            projectile.penetrate = 4;
             projectile.timeLeft = 360;
             projectile.extraUpdates = 2;
             projectile.alpha = 200;
@@ -36,8 +36,8 @@ namespace OratiumMod.Items.Projectiles
             projectile.velocity *= 0.0f;
             projectile.timeLeft = 100;
 
-            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<ArcaneCloud>());
-            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<Blister>());
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<PurpleStrong>());
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<GreenSmall>());
 
             return false;
         }
@@ -50,7 +50,7 @@ namespace OratiumMod.Items.Projectiles
 
             if (projectile.owner == Main.myPlayer && Main.rand.Next(4) == 0)
             {
-                Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<Blister>());
+                Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<GreenSmall>());
             }
             projectile.ai[0] += 1f;
             if (projectile.ai[0] > 50f)

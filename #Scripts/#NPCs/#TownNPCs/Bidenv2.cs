@@ -62,7 +62,7 @@ namespace OratiumMod.Items.NPCs.TownNPCs
             int num = npc.life > 0 ? 1 : 5;
             for (int k = 0; k < num; k++)
             {
-                Dust.NewDust(npc.position, npc.width, npc.height, ModContent.DustType<Sparkle>());
+                Dust.NewDust(npc.position, npc.width, npc.height, ModContent.DustType<BlueSmall>());
             }
         }
 

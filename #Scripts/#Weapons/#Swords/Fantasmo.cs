@@ -16,7 +16,7 @@ namespace OratiumMod.Items.Weapons.Swords
 
         public override void SetDefaults()
         {
-            item.damage = 40;
+            item.damage = 140;
             item.knockBack = 10;
             item.crit = 30;
             item.width = 40;
@@ -41,14 +41,14 @@ namespace OratiumMod.Items.Weapons.Swords
         {
             if (player.altFunctionUse == 2)
             {
-                item.damage = 250;
+                item.damage = 450;
                 item.knockBack = 10;
                 item.crit = 23;
                 item.width = 22;
                 item.height = 22;
                 item.useStyle = 1;
-                item.useTime = 30;
-                item.useAnimation = 31;
+                item.useTime = 10;
+                item.useAnimation = 11;
                 item.UseSound = SoundID.Item1;
                 item.shoot = mod.ProjectileType("FantasmoProjectile");
                 item.shootSpeed = 16f;
@@ -59,7 +59,7 @@ namespace OratiumMod.Items.Weapons.Swords
             }
             else if (player.ownedProjectileCounts[item.shoot] < 1)
             {
-                item.damage = 40;
+                item.damage = 140;
                 item.knockBack = 10;
                 item.crit = 30;
                 item.width = 22;
@@ -84,7 +84,7 @@ namespace OratiumMod.Items.Weapons.Swords
             {
                 Lighting.AddLight(player.position, 0f, 0.2f, 0f);
 
-                Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Blister>());
+                Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<GreenSmall>());
             }
         }
     }

@@ -18,8 +18,8 @@ namespace OratiumMod.Items.Weapons.Spears
             item.damage = 10;
             item.knockBack = 3;
             item.crit = 4; 
-            item.width = 32;
-            item.height = 32;
+            item.width = 22;
+            item.height = 22;
             item.value = 1000000;
             item.rare = 3;
             item.useStyle = ItemUseStyleID.HoldingOut;

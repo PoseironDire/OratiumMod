@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace OratiumMod.Items.Dusts
 {
-    public class HeartStealBulletTrail : ModDust
+    public class YellowSmall : ModDust
     {
         public override void OnSpawn(Dust dust)
         {
@@ -19,8 +19,8 @@ namespace OratiumMod.Items.Dusts
             dust.rotation += dust.velocity.X * 0.15f;
             dust.scale *= 0.99f;
             float light = 0.55f * dust.scale;
-            Lighting.AddLight(dust.position, 1f, 0.2f, 0.2f);
-            if (dust.scale < 0.2f)
+            Lighting.AddLight(dust.position, 0.3f, 0.3f, 0f);
+            if (dust.scale < 0.3f)
             {
                 dust.active = false;
             }

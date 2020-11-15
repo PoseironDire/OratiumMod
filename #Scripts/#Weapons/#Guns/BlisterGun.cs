@@ -16,7 +16,7 @@ namespace OratiumMod.Items.Weapons.Guns
 
         public override void SetDefaults()
         {
-            item.damage = 20; // Sets the item's damage. Note that projectiles shot by this weapon will use its and the used ammunition's damage added together.
+            item.damage = 25; // Sets the item's damage. Note that projectiles shot by this weapon will use its and the used ammunition's damage added together.
             item.knockBack = 10; // Sets the item's knockback. Note that projectiles shot by this weapon will use its and the used ammunition's knockback added together.
             item.crit = 4; // Sets the item's critical strike chance
             item.width = 40; // hitbox width of the item
