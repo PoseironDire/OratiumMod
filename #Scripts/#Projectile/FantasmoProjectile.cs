@@ -37,7 +37,7 @@ namespace OratiumMod.Items.Projectiles
 
         public override void AI()
         {
-            Lighting.AddLight(projectile.position, 0.5f, 1f, 0.5f);
+            Lighting.AddLight(projectile.position, 0.1f, 0.8f, 0.1f);
 
             if (projectile.owner == Main.myPlayer && Main.rand.Next(4) == 0)
             {
