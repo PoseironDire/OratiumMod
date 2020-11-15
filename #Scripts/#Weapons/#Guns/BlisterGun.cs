@@ -11,7 +11,7 @@ namespace OratiumMod.Items.Weapons.Guns
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Blister Gun");
-            Tooltip.SetDefault("The fastest gun you can find.");
+            Tooltip.SetDefault("The fastest gun you can find \n40% chance to not consume ammo");
         }
 
         public override void SetDefaults()
@@ -48,6 +48,11 @@ namespace OratiumMod.Items.Weapons.Guns
             }
             return true;
         }
+
+        public override bool ConsumeAmmo(Player player)
+		{
+			return Main.rand.NextFloat() >= .40f;
+		}
 
         public override Vector2? HoldoutOffset()
         {
