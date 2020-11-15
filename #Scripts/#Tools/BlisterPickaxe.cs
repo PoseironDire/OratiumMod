@@ -5,6 +5,11 @@ namespace OratiumMod.Items.Tools
 {
     public class BlisterPickaxe : ModItem
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Blister Pickaxe");
+        }
+
         public override void SetDefaults()
         {
             item.damage = 30;
@@ -23,11 +28,6 @@ namespace OratiumMod.Items.Tools
             item.melee = true;
             item.autoReuse = true;
             item.useTurn = true;
-        }
-
-        public override void SetStaticDefaults()
-        {
-            DisplayName.SetDefault("Blister Pickaxe");
         }
 
         public override void AddRecipes()
