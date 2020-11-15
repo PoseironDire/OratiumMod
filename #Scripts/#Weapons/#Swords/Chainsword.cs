@@ -8,27 +8,28 @@ namespace OratiumMod.Items.Weapons.Swords
 {
     public class Chainsword : ModItem
     {
-        public override void SetDefaults()
-        {
-            item.damage = 180;
-            item.melee = true;
-            item.axe = 25;
-            item.width = 40;
-            item.height = 40;
-            item.value = 10000000;
-            item.useTime = 31;
-            item.useAnimation = 32;
-            item.useStyle = 1;
-            item.knockBack = 10;
-            item.rare = ItemRarityID.Purple;
-            item.UseSound = SoundID.Item1;
-            item.autoReuse = true;
-            item.crit = 30;
-        }
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Chainsword");
             Tooltip.SetDefault("A tool, for slaughter..");
+        }
+
+        public override void SetDefaults()
+        {
+            item.damage = 180;
+            item.knockBack = 10;
+            item.crit = 30;
+            item.axe = 25;
+            item.width = 40;
+            item.height = 40;
+            item.value = 10000000;
+            item.rare = 7;
+            item.useStyle = 1;
+            item.useTime = 31;
+            item.useAnimation = 32;
+            item.UseSound = SoundID.Item1;
+            item.melee = true;
+            item.autoReuse = true;
         }
 
         public override void MeleeEffects(Player player, Rectangle hitbox)

@@ -7,29 +7,31 @@ namespace OratiumMod.Items.Weapons.Swords
 {
     public class BlisterSword : ModItem
     {
-        public override void SetDefaults()
-        {
-            item.melee = true;
-            item.damage = 40;
-            item.width = 20;
-            item.height = 20;
-            item.value = 90000;
-            item.useTime = 18;
-            item.useAnimation = 19;
-            item.rare = 4;
-            item.useStyle = 1;
-            item.knockBack = 4;
-            item.UseSound = SoundID.Item1;
-            item.autoReuse = true;
-            item.crit = 20;
-            item.shoot = mod.ProjectileType("BlisterSwordProjectile");
-            item.shootSpeed = 10f;
-        }
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Blister Sword");
-            Tooltip.SetDefault("Minor Upgrade For The Katana, Maybe.");
         }
+
+        public override void SetDefaults()
+        {
+            item.damage = 40;
+            item.knockBack = 4;
+            item.crit = 20;
+            item.width = 20;
+            item.height = 20;
+            item.value = 90000;
+            item.rare = 4;
+            item.useStyle = 1;
+            item.useTime = 18;
+            item.useAnimation = 19;
+            item.UseSound = SoundID.Item1;
+            item.shoot = mod.ProjectileType("BlisterSwordProjectile");
+            item.shootSpeed = 10f;
+            item.scale = 1.25f;
+            item.melee = true;
+            item.autoReuse = true;
+        }
+
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
@@ -38,6 +40,7 @@ namespace OratiumMod.Items.Weapons.Swords
             recipe.SetResult(this);
             recipe.AddRecipe();
         }
+
         public override void MeleeEffects(Player player, Rectangle hitbox)
         {
             if (Main.rand.NextBool(3))

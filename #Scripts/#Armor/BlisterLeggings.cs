@@ -13,6 +13,7 @@ namespace OratiumMod.Items.Armor
             DisplayName.SetDefault("Blister Leggings");
             Tooltip.SetDefault("15% increased movement speed");
         }
+
         public override void SetDefaults()
         {
             item.width = 18;
@@ -21,10 +22,12 @@ namespace OratiumMod.Items.Armor
             item.rare = 4;
             item.defense = 18;
         }
+
         public override void UpdateEquip(Player player)
         {
             player.maxRunSpeed *= 1.15f;
         }
+
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
@@ -33,6 +36,5 @@ namespace OratiumMod.Items.Armor
             recipe.SetResult(this);
             recipe.AddRecipe();
         }
-
     }
 }

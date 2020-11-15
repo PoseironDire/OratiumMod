@@ -13,6 +13,7 @@ namespace OratiumMod.Items.Armor
             DisplayName.SetDefault("Divinite Leggings");
             Tooltip.SetDefault("25% increased throwing damage");
         }
+
         public override void SetDefaults()
         {
             item.width = 18;
@@ -21,10 +22,12 @@ namespace OratiumMod.Items.Armor
             item.rare = 6;
             item.defense = 26;
         }
+
         public override void UpdateEquip(Player player)
         {
             player.thrownDamage += 0.25f;
         }
+
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
@@ -33,6 +36,5 @@ namespace OratiumMod.Items.Armor
             recipe.SetResult(this);
             recipe.AddRecipe();
         }
-
     }
 }

@@ -14,28 +14,26 @@ namespace OratiumMod.Items.Projectiles
 
         public override void SetDefaults()
         {
-            projectile.width = 18;
-            projectile.height = 18;
+            projectile.width = 20;
+            projectile.height = 20;
             projectile.aiStyle = 19;
             projectile.penetrate = -1;
-            projectile.scale = 1.3f;
             projectile.alpha = 0;
-
+            projectile.scale = 1.3f;
+            projectile.melee = true;
+            projectile.friendly = true;
             projectile.hide = true;
             projectile.ownerHitCheck = true;
-            projectile.melee = true;
             projectile.tileCollide = false;
-            projectile.friendly = true;
         }
-
         // In here the AI uses this example, to make the code more organized and readable
-        // Also showcased in ExampleJavelinProjectile.cs
-        public float movementFactor // Change this value to alter how fast the spear moves
+        // Also showcased in TModLoader/ExampleJavelinProjectile.cs
+        // Change this value to alter how fast the spear moves
+        public float movementFactor 
         {
             get => projectile.ai[0];
             set => projectile.ai[0] = value;
         }
-
         // It appears that for this AI, only the ai0 field is used!
         public override void AI()
         {
@@ -49,8 +47,8 @@ namespace OratiumMod.Items.Projectiles
             projOwner.itemTime = projOwner.itemAnimation;
             projectile.position.X = ownerMountedCenter.X - (float)(projectile.width / 2);
             projectile.position.Y = ownerMountedCenter.Y - (float)(projectile.height / 2);
-            // As long as the player isn't frozen, the spear can move
-            if (!projOwner.frozen)
+
+            if (!projOwner.frozen) // As long as the player isn't frozen, the spear can move
             {
                 if (movementFactor == 0f) // When initially thrown out, the ai0 will be 0f
                 {
@@ -82,18 +80,18 @@ namespace OratiumMod.Items.Projectiles
                 projectile.rotation -= MathHelper.ToRadians(90f);
             }
 
-            // These dusts are added later, for the 'ExampleMod' effect
-            if (Main.rand.NextBool(3))
+            if (Main.rand.NextBool(3)) // These dusts are added later
             {
                 Dust dust = Dust.NewDustDirect(projectile.position, projectile.height, projectile.width, ModContent.DustType<Sparkle>(),
-                    projectile.velocity.X * .2f, projectile.velocity.Y * .2f, 200, Scale: 1.2f);
+                projectile.velocity.X * .2f, projectile.velocity.Y * .2f, 200, Scale: 1.2f);
                 dust.velocity += projectile.velocity * 0.3f;
                 dust.velocity *= 0.2f;
             }
+            
             if (Main.rand.NextBool(4))
             {
                 Dust dust = Dust.NewDustDirect(projectile.position, projectile.height, projectile.width, ModContent.DustType<Sparkle>(),
-                    0, 0, 254, Scale: 0.3f);
+                0, 0, 254, Scale: 0.3f);
                 dust.velocity += projectile.velocity * 0.5f;
                 dust.velocity *= 0.5f;
             }

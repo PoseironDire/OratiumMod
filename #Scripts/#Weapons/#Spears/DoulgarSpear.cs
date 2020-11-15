@@ -16,24 +16,23 @@ namespace OratiumMod.Items.Weapons.Spears
         public override void SetDefaults()
         {
             item.damage = 10;
-            item.useStyle = ItemUseStyleID.HoldingOut;
-            item.useAnimation = 24;
-            item.useTime = 34;
-            item.shootSpeed = 2.7f;
-            item.knockBack = 3f;
+            item.knockBack = 3;
+            item.crit = 4; 
             item.width = 32;
             item.height = 32;
-            item.scale = 1f;
+            item.value = 1000000;
             item.rare = 3;
-            item.value = Item.sellPrice(gold: 1);
-
+            item.useStyle = ItemUseStyleID.HoldingOut;
+            item.useTime = 34;
+            item.useAnimation = 24;
+            item.UseSound = SoundID.Item1;
+            item.scale = 1;
+            item.shoot = ModContent.ProjectileType<DoulgarSpearProjectile>();
+            item.shootSpeed = 2.7f;
             item.melee = true;
             item.noMelee = true; // Important because the spear is actually a projectile instead of an item. This prevents the melee hitbox of this item.
-            item.noUseGraphic = true; // Important, it's kind of wired if people see two spears at one time. This prevents the melee animation of this item.
             item.autoReuse = true; // Most spears don't autoReuse, but it's possible when used in conjunction with CanUseItem()
-
-            item.UseSound = SoundID.Item1;
-            item.shoot = ModContent.ProjectileType<DoulgarSpearProjectile>();
+            item.noUseGraphic = true; // Important, it's kind of wired if people see two spears at one time. This prevents the melee animation of this item.
         }
 
         public override bool CanUseItem(Player player)

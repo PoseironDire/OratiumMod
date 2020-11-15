@@ -11,29 +11,26 @@ namespace OratiumMod.Items.Projectiles
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Evamparus");
+            DisplayName.SetDefault("Evamparus Projectile");
         }
 
         public override void SetDefaults()
         {
             projectile.width = 10;
             projectile.height = 20;
-            projectile.friendly = true;
-            projectile.melee = true;
-            projectile.penetrate = 4;
             projectile.aiStyle = 1;
+            projectile.penetrate = 4;
             projectile.timeLeft = 300;
             projectile.extraUpdates = 2;
+            projectile.melee = true;
+            projectile.friendly = true;
             projectile.tileCollide = true;
             projectile.ignoreWater = true;
         }
         
         public override bool OnTileCollide(Vector2 oldVelocity)
         {
-            //If collide with tile, reduce the penetrate.
-            //So the projectile can reflect at most 5 times
-
-            projectile.Kill();
+           projectile.Kill();
 
             Main.PlaySound(SoundID.Item10, projectile.position);
 
@@ -41,6 +38,7 @@ namespace OratiumMod.Items.Projectiles
 
             return false;
         }
+
         public override void AI()
         {
             projectile.rotation = (float)Math.Atan2((double)projectile.velocity.Y, (double)projectile.velocity.X) + 1.57f;

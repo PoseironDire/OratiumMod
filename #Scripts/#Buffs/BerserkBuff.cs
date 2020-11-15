@@ -4,8 +4,6 @@ using Terraria.ModLoader;
 
 namespace OratiumMod.Items.Buffs
 {
-    // Ethereal Flames is an example of a buff that causes constant loss of life.
-    // See ExamplePlayer.UpdateBadLifeRegen and ExampleGlobalNPC.UpdateLifeRegen for more information.
     public class BerserkBuff : ModBuff
     {
         public override void SetDefaults()
@@ -17,9 +15,10 @@ namespace OratiumMod.Items.Buffs
             Main.buffNoSave[Type] = true;
             longerExpertDebuff = true;
         }
+
         public override void Update(Player player, ref int buffIndex)
         {
-            player.statDefense -= 100; //Grant a +4 defense boost to the player while the buff is active.
+            player.statDefense -= 100; 
             player.allDamage *= 2;
         }
     }

@@ -9,7 +9,7 @@ namespace OratiumMod.Items.Sounds
         {
             // By creating a new instance, this ModSound allows for overlapping sounds. Non-ModSound behavior is to restart the sound, only permitting 1 instance.
             soundInstance = sound.CreateInstance();
-            soundInstance.Volume = volume * .5f;
+            soundInstance.Volume = volume * .6f;
             soundInstance.Pan = pan;
             soundInstance.Pitch = -1.0f;
             return soundInstance;

@@ -8,9 +8,9 @@ namespace OratiumMod.Items.Dusts
         public override void OnSpawn(Dust dust)
         {
             dust.velocity *= 0.4f;
+            dust.scale *= 1.0f;
             dust.noGravity = true;
             dust.noLight = true;
-            dust.scale *= 1.0f;
         }
 
         public override bool Update(Dust dust)

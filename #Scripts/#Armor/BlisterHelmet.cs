@@ -13,6 +13,7 @@ namespace OratiumMod.Items.Armor
             DisplayName.SetDefault("Blister Mask");
             Tooltip.SetDefault("10% increased movement speed");
         }
+
         public override void SetDefaults()
         {
             item.width = 18;
@@ -21,19 +22,23 @@ namespace OratiumMod.Items.Armor
             item.rare = 4;
             item.defense = 14;
         }
+
         public override void UpdateEquip(Player player)
         {
             player.maxRunSpeed *= 1.1f;
         }
+
         public override bool IsArmorSet(Item head, Item body, Item legs)
         {
             return body.type == ModContent.ItemType<BlisterSuit>() && legs.type == ModContent.ItemType<BlisterLeggings>();
         }
+
         public override void UpdateArmorSet(Player player)
         {
             player.setBonus = "20% increased melee damage";
             player.meleeDamage += 0.2f;
         }
+
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
@@ -42,6 +47,5 @@ namespace OratiumMod.Items.Armor
             recipe.SetResult(this);
             recipe.AddRecipe();
         }
-
     }
 }

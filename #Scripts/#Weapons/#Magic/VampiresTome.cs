@@ -19,28 +19,29 @@ namespace OratiumMod.Items.Weapons.Magic
         public override void SetDefaults()
         {
             item.damage = 120;
-            item.magic = true;
-            item.mana = 4;
+            item.knockBack = 4; 
+            item.crit = 4; 
             item.width = 28;
             item.height = 38;
+            item.value = 40000;
+            item.rare = 7; 
+            item.useStyle = 5;
             item.useTime = 16;
             item.useAnimation = 17;
-            item.useStyle = 5;
-            item.noMelee = true; //so the item's animation doesn't do damage
-            item.knockBack = 5;
-            item.value = 10000;
-            item.rare = ItemRarityID.Green;
             item.UseSound = SoundID.Item20;
-            item.autoReuse = true;
-            item.shootSpeed = 14f;
+            item.mana = 4;
             item.shoot = ProjectileID.VampireKnife;
+            item.shootSpeed = 14f;
+            item.magic = true;
+            item.noMelee = true;
+            item.autoReuse = true;
         }
 
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
             type = ProjectileID.VampireKnife;
 
-            int numberProjectiles = 6;
+            int numberProjectiles = 4;
             for (int i = 0; i < numberProjectiles; i++)
             {
                 Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(30));

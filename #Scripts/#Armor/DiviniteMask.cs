@@ -13,6 +13,7 @@ namespace OratiumMod.Items.Armor
             DisplayName.SetDefault("Divinite Mask");
             Tooltip.SetDefault("10% increased throwing damage");
         }
+
         public override void SetDefaults()
         {
             item.width = 18;
@@ -21,14 +22,17 @@ namespace OratiumMod.Items.Armor
             item.rare = 6;
             item.defense = 25;
         }
+
         public override void UpdateEquip(Player player)
         {
             player.thrownDamage += 0.1f;
         }
+
         public override bool IsArmorSet(Item head, Item body, Item legs)
         {
             return body.type == ModContent.ItemType<DiviniteSuit>() && legs.type == ModContent.ItemType<DiviniteLeggings>();
         }
+
         public override void UpdateArmorSet(Player player)
         {
             player.setBonus = "Increased throwing crit and velocity";
@@ -36,6 +40,7 @@ namespace OratiumMod.Items.Armor
             player.thrownVelocity += 0.7f;
             player.thrownCrit += 12;
         }
+
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
@@ -44,6 +49,5 @@ namespace OratiumMod.Items.Armor
             recipe.SetResult(this);
             recipe.AddRecipe();
         }
-
     }
 }

@@ -17,19 +17,20 @@ namespace OratiumMod.Items.Projectiles
             projectile.width = 40;
             projectile.height = 40;
             projectile.aiStyle = 3;
-            projectile.friendly = true;
-            projectile.melee = true;
-            projectile.tileCollide = false;
-            projectile.ignoreWater = true;
             projectile.penetrate = 2;
             projectile.timeLeft = 1000;
             projectile.extraUpdates = 1;
+            projectile.melee = true;
+            projectile.friendly = true;
+            projectile.tileCollide = false;
+            projectile.ignoreWater = true;
         }
         
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
-            Main.PlaySound(SoundID.Item12);
-            Lighting.AddLight(projectile.position, 1.0f, 0.0f, 2.0f);
+            Main.PlaySound(SoundID.Item11);
+
+            Lighting.AddLight(projectile.position, 1f, 0.0f, 2f);
 
             Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<Blister>());
         }

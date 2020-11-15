@@ -7,6 +7,10 @@ namespace OratiumMod.Items.NPCs.Bosses
     [AutoloadBossHead]
     public class MorphEizer : ModNPC
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Morph Eizer");
+        }
 
         public override void SetDefaults()
         {
@@ -25,15 +29,13 @@ namespace OratiumMod.Items.NPCs.Bosses
             music = MusicID.Boss2;
             npc.aiStyle = 30;
         }
-        public override void SetStaticDefaults()
-        {
-            DisplayName.SetDefault("Morph Eizer");
-        }
+
         public override void ScaleExpertStats(int numPlayers, float bossLifeScale)
         {
             npc.lifeMax = 1000 + numPlayers * 400;
             npc.damage = 50;
         }
+
         public override void NPCLoot()
         {
             if (Main.expertMode)
@@ -49,15 +51,11 @@ namespace OratiumMod.Items.NPCs.Bosses
                 }
                 else if (choice == 2)
                 {
-                    Item.NewItem(npc.getRect(), mod.ItemType("Deathbringer"));
+                    Item.NewItem(npc.getRect(), mod.ItemType("BlisterDrifters"));
                 }
                 else if (choice == 3)
                 {
-                    Item.NewItem(npc.getRect(), mod.ItemType("BlisterDrifters"));
-                }
-                else if (choice == 4)
-                {
-                    Item.NewItem(npc.getRect(), mod.ItemType("BlisterPickaxe"));
+                    Item.NewItem(npc.getRect(), mod.ItemType("DasherBoots"));
                 }
             }
             else
@@ -65,7 +63,7 @@ namespace OratiumMod.Items.NPCs.Bosses
                 int choice = Main.rand.Next(2);
                 if (choice == 0)
                 {
-                    Item.NewItem(npc.getRect(), mod.ItemType("BlisterPickaxe"));
+                    Item.NewItem(npc.getRect(), mod.ItemType("DasherBoots"));
                 }
                 else if (choice == 1)
                 {

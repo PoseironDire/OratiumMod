@@ -17,9 +17,9 @@ namespace OratiumMod.Items.Accessories
 
 		public override void SetDefaults()
 		{
+			item.rare = 6;
+			item.value = 15000;
 			item.accessory = true;
-			item.rare = ItemRarityID.Blue;
-			item.value = Item.sellPrice(silver: 60);
 		}
 
 		public override void UpdateAccessory(Player player, bool hideVisual)

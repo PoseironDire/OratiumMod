@@ -12,28 +12,25 @@ namespace OratiumMod.Items.Projectiles
         public override void SetStaticDefaults()
         {
             Main.projFrames[projectile.type] = 4;
-            DisplayName.SetDefault("Blister Sword");
+            DisplayName.SetDefault("Blister Sword Projectile");
         }
 
         public override void SetDefaults()
         {
             projectile.width = 10;
             projectile.height = 20;
-            projectile.friendly = true;
-            projectile.melee = true;
             projectile.penetrate = 2;
-            projectile.alpha = 200;
             projectile.timeLeft = 360;
             projectile.extraUpdates = 2;
+            projectile.alpha = 200;
+            projectile.melee = true;
+            projectile.friendly = true;
             projectile.tileCollide = false;
             projectile.ignoreWater = true;
         }
         
         public override bool OnTileCollide(Vector2 oldVelocity)
         {
-            //If collide with tile, reduce the penetrate.
-            //So the projectile can reflect at most 5 times
-
             Main.PlaySound(SoundID.Item10, projectile.position);
 
             projectile.velocity *= 0.0f;
@@ -44,6 +41,7 @@ namespace OratiumMod.Items.Projectiles
 
             return false;
         }
+
         public override void AI()
         {
             projectile.rotation = (float)Math.Atan2((double)projectile.velocity.Y, (double)projectile.velocity.X) + 1.57f;

@@ -9,8 +9,8 @@ namespace OratiumMod.Items.Accessories
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("25% chance not to consume ammo");
             DisplayName.SetDefault("Ammo Pocket");
+            Tooltip.SetDefault("25% chance not to consume ammo");
         }
 
         public override void SetDefaults()

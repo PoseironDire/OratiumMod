@@ -17,13 +17,13 @@ namespace OratiumMod.Items.Projectiles
             projectile.width = 20;
             projectile.height = 20;
             projectile.aiStyle = 3;
-            projectile.friendly = true;
-            projectile.melee = true;
-            projectile.tileCollide = false;
-            projectile.ignoreWater = true;
-            projectile.penetrate = 5;
+            projectile.penetrate = 2;
             projectile.timeLeft = 1000;
             projectile.extraUpdates = 2;
+            projectile.melee = true;
+            projectile.friendly = true;
+            projectile.tileCollide = true;
+            projectile.ignoreWater = true;
         }
         
         public override void AI()

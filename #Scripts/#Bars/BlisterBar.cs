@@ -5,17 +5,19 @@ namespace OratiumMod.Items.Bars
 {
     public class BlisterBar : ModItem
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Blister Bar");
+            Tooltip.SetDefault("'Shiny! Or is it glowing?'");
+        }
+
         public override void SetDefaults()
         {
             item.maxStack = 999;
             item.value = 9000;
             item.rare = 4;
         }
-        public override void SetStaticDefaults()
-        {
-            DisplayName.SetDefault("Blister Bar");
-            Tooltip.SetDefault("'Shiny! Or is it glowing?'");
-        }
+        
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);

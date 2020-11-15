@@ -5,26 +5,29 @@ namespace OratiumMod.Items.Ores
 {
     public class AdamantiumOre : ModItem
     {
-        public override void SetDefaults()
-        {
-            item.maxStack = 999;
-            item.value = 3000;
-            item.width = 40;
-            item.rare = 4;
-            item.height = 40;
-            item.useTurn = true;
-            item.autoReuse = true;
-            item.useAnimation = 15;
-            item.useTime = 10;
-            item.useStyle = 1;
-            item.consumable = true;
-            item.createTile = mod.TileType("AdamantiumOreBlock");
-        }
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Adamantium Ore");
             Tooltip.SetDefault("'Straight Out Of Another Dimension'");
         }
+
+        public override void SetDefaults()
+        {
+            item.createTile = mod.TileType("AdamantiumOreBlock");
+            item.createTile = 6;
+            item.maxStack = 999;
+            item.width = 40;
+            item.height = 40;
+            item.useStyle = 1;
+            item.useTime = 10;
+            item.useAnimation = 15;
+            item.value = 3000;
+            item.rare = 4;
+            item.useTurn = true;
+            item.autoReuse = true;
+            item.consumable = true;
+        }
+
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);

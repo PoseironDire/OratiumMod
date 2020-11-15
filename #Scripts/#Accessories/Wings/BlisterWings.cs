@@ -10,8 +10,8 @@ namespace OratiumMod.Items.Accessories.Wings
 
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Allows flight and slow fall");
             DisplayName.SetDefault("Blister Wings");
+            Tooltip.SetDefault("Allows flight and slow fall");
         }
 
         public override void SetDefaults()
@@ -48,8 +48,8 @@ namespace OratiumMod.Items.Accessories.Wings
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(mod.ItemType("BlisterBar"), 18);
-            recipe.AddIngredient(ItemID.SoulofFlight, 20);
             recipe.AddIngredient(mod.ItemType("SoulofIgnite"), 6);
+            recipe.AddIngredient(ItemID.SoulofFlight, 20);
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
             recipe.AddRecipe();

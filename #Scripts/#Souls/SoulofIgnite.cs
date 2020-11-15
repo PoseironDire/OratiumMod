@@ -22,11 +22,11 @@ namespace OratiumMod.Items.Souls
 		public override void SetDefaults() {
 			Item refItem = new Item();
 			refItem.SetDefaults(ItemID.SoulofSight);
+			item.maxStack = 999;
 			item.width = refItem.width;
 			item.height = refItem.height;
-			item.maxStack = 999;
 			item.value = 2000;
-			item.rare = ItemRarityID.Orange;
+			item.rare = 6;
 		}
 
 		public override void PostUpdate()

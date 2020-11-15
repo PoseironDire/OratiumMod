@@ -5,28 +5,30 @@ namespace OratiumMod.Items.Tools
 {
     public class BlisterAxe : ModItem
     {
-        public override void SetDefaults()
-        {
-            item.melee = true;
-            item.damage = 32;
-            item.width = 48;
-            item.height = 48;
-            item.useTime = 12;
-            item.useAnimation = 12;
-            item.axe = 15;
-            item.useStyle = 1;
-            item.knockBack = 6;
-            item.value = 90000;
-            item.rare = 4;
-            item.UseSound = SoundID.Item1;
-            item.autoReuse = true;
-            item.useTurn = true;
-        }
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Blister Axe");
-            Tooltip.SetDefault("Faster Than Something...");
         }
+
+        public override void SetDefaults()
+        {
+            item.damage = 32;
+            item.knockBack = 6;
+            item.crit = 20;
+            item.axe = 22;
+            item.width = 48;
+            item.height = 48;
+            item.value = 90000;
+            item.rare = 4;
+            item.useStyle = 1;
+            item.useTime = 12;
+            item.useAnimation = 13;
+            item.UseSound = SoundID.Item1;
+            item.melee = true;
+            item.autoReuse = true;
+            item.useTurn = true;
+        }
+
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);

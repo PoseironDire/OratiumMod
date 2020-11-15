@@ -11,16 +11,16 @@ namespace OratiumMod.Items.Accessories
 
 		public override void SetStaticDefaults() 
         {
-			Tooltip.SetDefault("Increases armor penetration by 5 \nReleases bees and douses the user in honey when damaged \nIncreases movement speed after taking damage");
-			
             DisplayName.SetDefault("Stninger Reflex Necklace");
+			Tooltip.SetDefault("Increases armor penetration by 5 \nReleases bees and douses the user in honey when damaged \nIncreases movement speed after taking damage");
 		}
 
-		public override void SetDefaults() {
+		public override void SetDefaults() 
+		{
 			item.width = 22;
 			item.height = 20;
-			item.value = 60;
-			item.rare = 4;
+			item.value = 20000;
+			item.rare = 5;
 			item.accessory = true;
 		}
 
@@ -31,7 +31,6 @@ namespace OratiumMod.Items.Accessories
             player.panic = true;
 
 		}
-
 
 		public override void AddRecipes() 
         {

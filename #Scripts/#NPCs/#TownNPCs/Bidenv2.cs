@@ -43,18 +43,18 @@ namespace OratiumMod.Items.NPCs.TownNPCs
 
         public override void SetDefaults()
         {
-            npc.townNPC = true;
-            npc.friendly = true;
+            npc.lifeMax = 250;
+            npc.damage = 10;
+            npc.defense = 15;
+            npc.knockBackResist = 0.5f;
             npc.width = 18;
             npc.height = 40;
             npc.aiStyle = 7;
-            npc.damage = 10;
-            npc.defense = 15;
-            npc.lifeMax = 250;
             npc.HitSound = SoundID.NPCHit1;
             npc.DeathSound = SoundID.NPCDeath1;
-            npc.knockBackResist = 0.5f;
             animationType = NPCID.Guide;
+            npc.townNPC = true;
+            npc.friendly = true;
         }
 
         public override void HitEffect(int hitDirection, double damage)
