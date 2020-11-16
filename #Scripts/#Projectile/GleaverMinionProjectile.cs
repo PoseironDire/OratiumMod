@@ -179,7 +179,7 @@ namespace OratiumMod.Items.Projectiles
 				}
 				else {
 					// Slow down the minion if closer to the player
-					speed = 6f;
+					speed = 10f;
 					inertia = 30f;
 				}
 				if (distanceToIdlePosition > 20f) {
