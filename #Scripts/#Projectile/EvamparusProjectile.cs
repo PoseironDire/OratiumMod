@@ -22,6 +22,7 @@ namespace OratiumMod.Items.Projectiles
             projectile.penetrate = 4;
             projectile.timeLeft = 300;
             projectile.extraUpdates = 2;
+            projectile.alpha = 255;
             projectile.melee = true;
             projectile.friendly = true;
             projectile.tileCollide = true;
@@ -34,20 +35,25 @@ namespace OratiumMod.Items.Projectiles
 
             Main.PlaySound(SoundID.Item10, projectile.position);
 
-            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<BlueStrong>());
-            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<BlueStrong>());
-            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<BlueStrong>());
-            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<BlueStrong>());
-            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<BlueStrong>());
-            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<BlueStrong>());
-            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<BlueStrong>());
-            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<BlueStrong>());
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<BlueStrong>(), projectile.velocity.X * -1, projectile.velocity.Y * -1);
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<BlueStrong>(), projectile.velocity.X * -1, projectile.velocity.Y * -1);
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<BlueStrong>(), projectile.velocity.X * -1, projectile.velocity.Y * -1);
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<BlueStrong>(), projectile.velocity.X * -1, projectile.velocity.Y * -1);
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<BlueStrong>(), projectile.velocity.X * -1, projectile.velocity.Y * -1);
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<BlueStrong>(), projectile.velocity.X * -1, projectile.velocity.Y * -1);
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<BlueStrong>(), projectile.velocity.X * -1, projectile.velocity.Y * -1);
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<BlueStrong>(), projectile.velocity.X * -1, projectile.velocity.Y * -1);
 
             return false;
         }
 
         public override void AI()
         {
+            if (projectile.alpha > 0)
+            {
+	            projectile.alpha -= 15; // Decrease alpha, increasing visibility.
+            }
+
             projectile.rotation = (float)Math.Atan2((double)projectile.velocity.Y, (double)projectile.velocity.X) + 1.57f;
 
             Lighting.AddLight(projectile.position, 0.7f, 0.7f, 0.9f);
