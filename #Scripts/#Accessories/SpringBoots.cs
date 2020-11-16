@@ -1,4 +1,3 @@
-using OratiumMod.Items.Tiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -7,12 +6,12 @@ using Terraria.ModLoader;
 namespace OratiumMod.Items.Accessories
 {
 	[AutoloadEquip(EquipType.Shoes)]
-	public class DasherBoots : ModItem
+	public class SpringBoots : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-            DisplayName.SetDefault("Dasher Boots");
-			Tooltip.SetDefault("Double tap up or down to do a dash!");
+            DisplayName.SetDefault("Spring Boots");
+			Tooltip.SetDefault("Double tap up or down to do a dash");
 		}
 
 		public override void SetDefaults()
@@ -124,7 +123,7 @@ namespace OratiumMod.Items.Accessories
 
 				//Set the flag for the DasherBoots being equipped if we have it equipped OR immediately return if any of the accessories are
 				// one of the higher-priority ones
-				if(item.type == ModContent.ItemType<DasherBoots>())
+				if(item.type == ModContent.ItemType<SpringBoots>())
 					dashAccessoryEquipped = true;
 				else if(item.type == ItemID.EoCShield || item.type == ItemID.MasterNinjaGear || item.type == ItemID.Tabi)
 					return;

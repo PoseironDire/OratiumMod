@@ -1,0 +1,45 @@
+using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.ID;
+using Terraria.ModLoader;
+
+namespace OratiumMod.Items.Buffs
+{
+    public class GleaverBuff : ModBuff
+    {
+        public override void SetDefaults()
+        {
+            
+        }
+    }
+}
+
+using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.ID;
+using Terraria.ModLoader;
+
+namespace OratiumMod.Items.
+{
+    public class : ModItem
+    {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("");
+        }
+
+        public override void SetDefaults()
+        {
+            
+        }
+
+        public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient();
+            recipe.AddTile(TileID.);
+            recipe.SetResult(this);
+            recipe.AddRecipe();
+        }
+    }
+}

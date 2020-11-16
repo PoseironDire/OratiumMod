@@ -45,17 +45,10 @@ namespace OratiumMod.Items.Weapons.Spears
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.Spear);
-            recipe.AddIngredient(ItemID.PlatinumBar, 12);
+            recipe.AddRecipeGroup("HigherMetal", 12);
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
             recipe.AddRecipe();
-
-            ModRecipe recipe2 = new ModRecipe(mod);
-            recipe2.AddIngredient(ItemID.Spear);
-            recipe2.AddIngredient(ItemID.GoldBar, 12);
-            recipe2.AddTile(TileID.Anvils);
-            recipe2.SetResult(this);
-            recipe2.AddRecipe();
         }
     }
 }

@@ -1,4 +1,3 @@
-using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -34,18 +33,11 @@ namespace OratiumMod.Items.Potions
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.Fireblossom);
             recipe.AddIngredient(ItemID.DoubleCod);
-            recipe.AddIngredient(ItemID.VileMushroom);
+            recipe.AddIngredient(ItemID.BottledWater);
+            recipe.AddRecipeGroup("CorruptedMushroom");
             recipe.AddTile(TileID.Bottles);
             recipe.SetResult(this);
             recipe.AddRecipe();
-
-            ModRecipe recipe2 = new ModRecipe(mod);
-            recipe2.AddIngredient(ItemID.Fireblossom);
-            recipe2.AddIngredient(ItemID.DoubleCod);
-            recipe2.AddIngredient(ItemID.ViciousMushroom);
-            recipe2.AddTile(TileID.Bottles);
-            recipe2.SetResult(this);
-            recipe2.AddRecipe();
         }
     }
 }
