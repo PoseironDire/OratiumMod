@@ -7,6 +7,7 @@ namespace OratiumMod.Items.Projectiles
 {
     public class VampireArrowProjectile : ModProjectile
     {
+        int Heal = 10;
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Vampire Arrow");
@@ -38,7 +39,7 @@ namespace OratiumMod.Items.Projectiles
 
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit) // Lifesteal effect
         {
-            int lifeSteal = damage / 5; // Lifesteal vlue
+            int lifeSteal = damage / Heal; // Lifesteal vlue
             Main.player[projectile.owner].statLife += lifeSteal; // Lifesteal function
             Main.player[projectile.owner].HealEffect(lifeSteal, true); // Green number display
         }

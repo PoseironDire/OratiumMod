@@ -32,9 +32,16 @@ namespace OratiumMod.Items.Projectiles
 
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit) // Lifesteal effect
         {
-            int lifeSteal = damage / 10; // Lifesteal vlue
+            int lifeSteal = damage / 18; // Lifesteal vlued 
             Main.player[projectile.owner].statLife += lifeSteal; // Lifesteal function
             Main.player[projectile.owner].HealEffect(lifeSteal, true); // Green number display
+
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<RedStrong>(), projectile.velocity.X * -2, projectile.velocity.Y * -1);
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<RedStrong>(), projectile.velocity.X * -1, projectile.velocity.Y * -2);
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<RedStrong>(), projectile.velocity.X * 2, projectile.velocity.Y * 1);
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<RedStrong>(), projectile.velocity.X * 1, projectile.velocity.Y * 2);
+            
+            Main.PlaySound(SoundID.Item50);
         }
 
         public override void AI()

@@ -51,7 +51,7 @@ namespace OratiumMod.Items.Projectiles
         {
             if (projectile.alpha > 0)
             {
-	            projectile.alpha -= 15; // Decrease alpha, increasing visibility.
+	            projectile.alpha -= 55; // Decrease alpha, increasing visibility.
             }
 
             projectile.rotation = (float)Math.Atan2((double)projectile.velocity.Y, (double)projectile.velocity.X) + 1.57f;

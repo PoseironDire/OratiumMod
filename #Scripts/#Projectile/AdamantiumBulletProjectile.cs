@@ -30,6 +30,13 @@ namespace OratiumMod.Items.Projectiles
             projectile.ignoreWater = true;          //Does the projectile's speed be influenced by water?
         }
         
+        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit) // Lifesteal effect
+        {
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<YellowStrong>(), projectile.velocity.X * 2, projectile.velocity.Y * 2);
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<YellowStrong>(), projectile.velocity.X * 2.1f, projectile.velocity.Y * 2.1f);
+            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<YellowStrong>(), projectile.velocity.X * 2.2f, projectile.velocity.Y * 2.2f);
+        }
+        
         public override bool OnTileCollide(Vector2 oldVelocity)
         {
             //If collide with tile, reduce the penetrate.
