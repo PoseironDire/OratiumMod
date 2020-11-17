@@ -8,7 +8,7 @@ namespace OratiumMod.Items.Weapons.Ammo
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Heart Steal Bullet");
-            Tooltip.SetDefault("Healing bullets");
+            Tooltip.SetDefault("'Healing bullets'");
         }
 
         public override void SetDefaults()

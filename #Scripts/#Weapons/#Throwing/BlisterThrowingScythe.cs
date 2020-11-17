@@ -9,7 +9,7 @@ namespace OratiumMod.Items.Weapons.Throwing
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Blister Throwing Scythe");
-            Tooltip.SetDefault("A Fast Throwable Schyte That Passes Through Blocks.");
+            Tooltip.SetDefault("'A fast throwable schyte that passes through blocks.'");
         }
 
         public override void SetDefaults()

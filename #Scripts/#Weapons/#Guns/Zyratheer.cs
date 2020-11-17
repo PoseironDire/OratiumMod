@@ -11,7 +11,7 @@ namespace OratiumMod.Items.Weapons.Guns
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Zyratheer");
-            Tooltip.SetDefault("The fastest gun you can craft \n80% chance to not consume ammo");
+            Tooltip.SetDefault("80% chance to not consume ammo \n'The fastest gun you can craft'");
         }
 
         public override void SetDefaults()

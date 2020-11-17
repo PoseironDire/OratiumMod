@@ -8,13 +8,13 @@ namespace OratiumMod.Items.Weapons.Ammo
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Adamantium Bullet");
-            Tooltip.SetDefault("Speedy reflective bullets");
+            Tooltip.SetDefault("'Speedy reflective bullets'");
         }
 
         public override void SetDefaults()
         {
             item.maxStack = 999;
-            item.damage = 14;
+            item.damage = 10;
             item.knockBack = 2;
             item.crit = 4;
             item.width = 8;

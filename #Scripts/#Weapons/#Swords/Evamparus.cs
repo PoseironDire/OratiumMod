@@ -11,7 +11,7 @@ namespace OratiumMod.Items.Weapons.Swords
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Evamparus");
-            Tooltip.SetDefault("???...");
+            Tooltip.SetDefault("'???...'");
         }
 
         public override void SetDefaults()

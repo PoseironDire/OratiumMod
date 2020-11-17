@@ -9,7 +9,7 @@ namespace OratiumMod.Items.Weapons.Throwing
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Blister Drifters");
-            Tooltip.SetDefault("Two Really Fast Throwable Daggers.");
+            Tooltip.SetDefault("'Two really fast throwable daggers.'");
         }
 
         public override void SetDefaults()

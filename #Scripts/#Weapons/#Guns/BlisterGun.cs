@@ -11,7 +11,7 @@ namespace OratiumMod.Items.Weapons.Guns
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Blister Gun");
-            Tooltip.SetDefault("Compact Minigun \n40% chance to not consume ammo");
+            Tooltip.SetDefault("40% chance to not consume ammo \n'Compact Minigun'");
         }
 
         public override void SetDefaults()

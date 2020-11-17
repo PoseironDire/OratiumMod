@@ -10,7 +10,7 @@ namespace OratiumMod.Items.Weapons.Spears
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Doulgar Spear");
-            Tooltip.SetDefault("A faster variant of the Spear");
+            Tooltip.SetDefault("'A faster variant of the Spear'");
         }
 
         public override void SetDefaults()

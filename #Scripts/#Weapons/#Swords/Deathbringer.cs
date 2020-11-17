@@ -8,7 +8,7 @@ namespace OratiumMod.Items.Weapons.Swords
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Deathbringer");
-            Tooltip.SetDefault("Bringer of Death, what can i say..");
+            Tooltip.SetDefault("'Bringer of Death, what can i say..'");
         }
 
         public override void SetDefaults()

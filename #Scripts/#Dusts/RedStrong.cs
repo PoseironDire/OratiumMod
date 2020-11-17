@@ -17,7 +17,7 @@ namespace OratiumMod.Items.Dusts
         {
             dust.position += dust.velocity;
             dust.rotation += dust.velocity.X * 0.15f;
-            dust.scale *= 0.92f;
+            dust.scale *= 0.94f;
             float light = 0.55f * dust.scale;
             Lighting.AddLight(dust.position, 0.5f, 0, 0);
             if (dust.scale < 0.1f)

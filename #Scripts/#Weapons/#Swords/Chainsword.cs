@@ -11,7 +11,7 @@ namespace OratiumMod.Items.Weapons.Swords
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Chainsword");
-            Tooltip.SetDefault("A tool, for slaughter..");
+            Tooltip.SetDefault("'A great tool, for slaughter..'");
         }
 
         public override void SetDefaults()

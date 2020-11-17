@@ -11,7 +11,7 @@ namespace OratiumMod.Items.Weapons.Swords
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Fantasmo");
-            Tooltip.SetDefault("???...");
+            Tooltip.SetDefault("'An energized katana that can be thrown'");
         }
 
         public override void SetDefaults()

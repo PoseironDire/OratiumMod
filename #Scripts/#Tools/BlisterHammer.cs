@@ -8,7 +8,7 @@ namespace OratiumMod.Items.Tools
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Blister Hammer");
-            Tooltip.SetDefault("Fastest hammer out there!");
+            Tooltip.SetDefault("'Fastest hammer out there!'");
         }
 
         public override void SetDefaults()
