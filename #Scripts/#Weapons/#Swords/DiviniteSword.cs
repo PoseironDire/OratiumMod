@@ -28,6 +28,7 @@ namespace OratiumMod.Items.Weapons.Swords
             item.UseSound = SoundID.Item1;
             item.scale = 1.25f;
             item.melee = true;
+            item.useTurn = true;
             item.autoReuse = true;
         }
 
