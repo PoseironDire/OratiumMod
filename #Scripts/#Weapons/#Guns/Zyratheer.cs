@@ -22,12 +22,12 @@ namespace OratiumMod.Items.Weapons.Guns
             item.width = 40; // hitbox width of the item
             item.height = 20; // hitbox height of the item
             item.value =  1000000000; // how much the item sells for (measured in copper)
-            item.rare = 9; // the color that the item's name will be in-game
+            item.rare = 13; // the color that the item's name will be in-game
             item.useStyle = ItemUseStyleID.HoldingOut; // how you use the item (swinging, holding out, etc)
             item.useTime = 0; // The item's use time in ticks (60 ticks == 1 second.)
             item.useAnimation = 1; // The length of the item's use animation in ticks (60 ticks == 1 second.)
             item.UseSound = SoundID.Item40; // mod.GetLegacySoundSlot(SoundType.Item, "Items/Sounds/gunShot"); // The sound that this item plays when used.
-            item.shoot = 10; //idk why but all the guns in the vanilla source have this
+            item.shoot = 10; //idk why but all the guns ine the vanilla source have this
             item.shootSpeed = 14f; // the speed of the projectile (measured in pixels per frame)
             item.useAmmo = AmmoID.Bullet; // The "ammo Id" of the ammo item that this weapon uses. Note that this is not an item Id, but just a magic value.
             item.ranged = true; // sets the damage type to ranged
