@@ -50,7 +50,7 @@ namespace OratiumMod.Items.Accessories.Wings
             recipe.AddIngredient(mod.ItemType("BlisterBar"), 18);
             recipe.AddIngredient(mod.ItemType("SoulofIgnite"), 6);
             recipe.AddIngredient(ItemID.SoulofFlight, 20);
-            recipe.AddTile(TileID.Anvils);
+            recipe.AddTile(TileID.MythrilAnvil);
             recipe.SetResult(this);
             recipe.AddRecipe();
         }

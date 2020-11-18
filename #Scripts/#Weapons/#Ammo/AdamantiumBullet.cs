@@ -32,7 +32,7 @@ namespace OratiumMod.Items.Weapons.Ammo
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(mod.ItemType("AdamantiumBar"), 1);
-            recipe.AddTile(TileID.Anvils);
+            recipe.AddTile(TileID.MythrilAnvil);
             recipe.SetResult(this, 150);
             recipe.AddRecipe();
         }

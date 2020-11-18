@@ -46,7 +46,7 @@ namespace OratiumMod.Items.Weapons.Spears
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.Spear);
             recipe.AddRecipeGroup("HigherMetal", 12);
-            recipe.AddTile(TileID.Anvils);
+            recipe.AddTile(TileID.MythrilAnvil);
             recipe.SetResult(this);
             recipe.AddRecipe();
         }

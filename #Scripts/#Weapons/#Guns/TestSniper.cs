@@ -56,7 +56,7 @@ namespace OratiumMod.Items.Weapons.Guns
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(mod.ItemType("AdamantiumBar"), 10);
             recipe.AddIngredient(mod.ItemType("SoulofIgnite"), 4);
-            recipe.AddTile(TileID.Anvils);
+            recipe.AddTile(TileID.MythrilAnvil);
             recipe.SetResult(this);
             recipe.AddRecipe();
         }

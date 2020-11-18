@@ -34,7 +34,7 @@ namespace OratiumMod.Items.Tools
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(mod.ItemType("BlisterBar"), 9);
             recipe.AddIngredient(mod.ItemType("SoulofIgnite"), 4);
-            recipe.AddTile(TileID.Anvils);
+            recipe.AddTile(TileID.MythrilAnvil);
             recipe.SetResult(this);
             recipe.AddRecipe();
         }

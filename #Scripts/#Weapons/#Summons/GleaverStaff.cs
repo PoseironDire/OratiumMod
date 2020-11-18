@@ -44,7 +44,7 @@ namespace OratiumMod.Items.Weapons.Summons
 		public override void AddRecipes() {
 			ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(mod.ItemType("AdamantiumBar"), 10);
-            recipe.AddTile(TileID.Anvils);
+            recipe.AddTile(TileID.MythrilAnvil);
             recipe.SetResult(this);
             recipe.AddRecipe();
         }

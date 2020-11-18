@@ -26,7 +26,7 @@ namespace OratiumMod.Items.Weapons.Guns
             item.useStyle = ItemUseStyleID.HoldingOut; // how you use the item (swinging, holding out, etc)
             item.useTime = 0; // The item's use time in ticks (60 ticks == 1 second.)
             item.useAnimation = 1; // The length of the item's use animation in ticks (60 ticks == 1 second.)
-            item.UseSound = SoundID.Item36; // mod.GetLegacySoundSlot(SoundType.Item, "Items/Sounds/gunShot"); // The sound that this item plays when used.
+            item.UseSound = SoundID.Item40; // mod.GetLegacySoundSlot(SoundType.Item, "Items/Sounds/gunShot"); // The sound that this item plays when used.
             item.shoot = 10; //idk why but all the guns in the vanilla source have this
             item.shootSpeed = 14f; // the speed of the projectile (measured in pixels per frame)
             item.useAmmo = AmmoID.Bullet; // The "ammo Id" of the ammo item that this weapon uses. Note that this is not an item Id, but just a magic value.
@@ -62,9 +62,18 @@ namespace OratiumMod.Items.Weapons.Guns
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod.ItemType("BlisterBar"), 10);
-            recipe.AddIngredient(mod.ItemType("SoulofIgnite"), 4);
-            recipe.AddTile(TileID.Anvils);
+            recipe.AddIngredient(ItemID.Musket);
+            recipe.AddIngredient(ItemID.PhoenixBlaster);
+            recipe.AddIngredient(ItemID.ClockworkAssaultRifle);
+            recipe.AddIngredient(ItemID.OnyxBlaster);
+            recipe.AddIngredient(ItemID.Megashark);
+            recipe.AddIngredient(ItemID.Uzi);
+            recipe.AddIngredient(ItemID.Gatligator);
+            recipe.AddIngredient(ItemID.Xenopopper);
+            recipe.AddIngredient(ItemID.VortexBeater);
+            recipe.AddIngredient(ItemID.IllegalGunParts);
+            recipe.AddIngredient(ItemID.SDMG);
+            recipe.AddTile(TileID.MythrilAnvil);
             recipe.SetResult(this);
             recipe.AddRecipe();
         }
