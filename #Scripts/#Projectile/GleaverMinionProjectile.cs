@@ -19,7 +19,7 @@ namespace OratiumMod.Items.Projectiles
 		public override void SetStaticDefaults() {
 			DisplayName.SetDefault("Gleaver");
 			// Sets the amount of frames this minion has on its spritesheet
-			Main.projFrames[projectile.type] = 3;
+			Main.projFrames[projectile.type] = 4;
 			// This is necessary for right-click targeting
 			ProjectileID.Sets.MinionTargettingFeature[projectile.type] = true;
 
@@ -58,6 +58,15 @@ namespace OratiumMod.Items.Projectiles
 		public override bool MinionContactDamage() {
 			return true;
 		}
+
+		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit) // Lifesteal effect
+        {
+            int lifeSteal = damage / 18; // Lifesteal vlued 
+            Main.player[projectile.owner].statLife += lifeSteal; // Lifesteal function
+            Main.player[projectile.owner].HealEffect(lifeSteal, true); // Green number display
+
+            Main.PlaySound(SoundID.Item50);
+        }
 
 		public override void AI() {
 			Player player = Main.player[projectile.owner];
