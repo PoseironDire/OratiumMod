@@ -16,7 +16,7 @@ namespace OratiumMod.Items.Weapons.Guns
 
         public override void SetDefaults()
         {
-            item.damage = 140; // Sets the item's damage. Note that projectiles shot by this weapon will use its and the used ammunition's damage added together.
+            item.damage = 120; // Sets the item's damage. Note that projectiles shot by this weapon will use its and the used ammunition's damage added together.
             item.knockBack = 4; // Sets the item's knockback. Note that projectiles shot by this weapon will use its and the used ammunition's knockback added together.
             item.crit = 4; // Sets the item's critical strike chance
             item.width = 40; // hitbox width of the item
@@ -26,7 +26,7 @@ namespace OratiumMod.Items.Weapons.Guns
             item.useStyle = ItemUseStyleID.HoldingOut; // how you use the item (swinging, holding out, etc)
             item.useTime = 0; // The item's use time in ticks (60 ticks == 1 second.)
             item.useAnimation = 1; // The length of the item's use animation in ticks (60 ticks == 1 second.)
-            item.UseSound = SoundID.Item40; // mod.GetLegacySoundSlot(SoundType.Item, "Items/Sounds/gunShot"); // The sound that this item plays when used.
+            item.UseSound = SoundID.Item36; // mod.GetLegacySoundSlot(SoundType.Item, "Items/Sounds/gunShot"); // The sound that this item plays when used.
             item.shoot = 10; //idk why but all the guns ine the vanilla source have this
             item.shootSpeed = 14f; // the speed of the projectile (measured in pixels per frame)
             item.useAmmo = AmmoID.Bullet; // The "ammo Id" of the ammo item that this weapon uses. Note that this is not an item Id, but just a magic value.
@@ -37,6 +37,13 @@ namespace OratiumMod.Items.Weapons.Guns
 
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
+            Main.PlaySound(SoundID.Item45);
+             int numberProjectiles = 2;
+            for (int i = 0; i < numberProjectiles; i++)
+            {
+                Vector2 superSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(5));
+                Projectile.NewProjectile(position.X, position.Y, superSpeed.X, superSpeed.Y, type, damage, knockBack, player.whoAmI);
+            }
             Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(15));
             speedX = perturbedSpeed.X;
             speedY = perturbedSpeed.Y;

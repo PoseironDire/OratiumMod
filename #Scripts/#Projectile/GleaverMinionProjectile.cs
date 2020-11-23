@@ -66,6 +66,7 @@ namespace OratiumMod.Items.Projectiles
             Main.player[projectile.owner].HealEffect(lifeSteal, true); // Green number display
 
             Main.PlaySound(SoundID.Item50);
+            Main.PlaySound(SoundID.Item45);
         }
 
 		public override void AI() {
